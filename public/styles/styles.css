@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;800&display=swap');
+
+* {
+    font-family: 'Work Sans', sans-serif;
+    box-sizing: border-box;
+}
+
+.navbar {
+    background-color: white;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar button {
+    margin-right: 20px;
+    border: none;
+}
+
+.navbar ul {
+    padding-left: 20px;
+}
+
+.navbar a {
+    font-size: 140%;
+}
+
+.container-fluid {
+    padding: 0 !important;
+    padding-left: 20px !important;
+}
+
+#navbarSupportedContent {
+    padding-right: 20px;
+}
+
+.upperlayer {
+    position: absolute;
+    z-index: 999;
+    width: 50%;
+    height: 100%;
+    background: white;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(0, 0, 0, 0) 100%);
+    padding: 2% 0 2% 2%;
+}
+
+.upperlayer>h1 {
+    font-size: 700%;
+    font-weight: 600;
+    margin-left: 20px;
+    letter-spacing: 5px;
+    color: black;
+}
+
+.upperlayer > h3 {
+    margin-left: 20px;
+}
+
+.stats {
+    width: 100%;
+    height: 20vh;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2%;
+    align-items: center;
+}
+
+.stats > div {
+    margin: 0 20px;
+    font-size: 400%;
+    font-weight: 400;
+    border-bottom: 4px solid rgb(130,37,6);
+}
+
+.card {
+    margin: 0 20px 20px 20px;
+}
+
+.card > img {
+    position: absolute;
+}
+
+.jobcardcollector {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 2% 0 0 0;
+}
+
+.jobcardmain {
+    padding: 2% 2% 0% 2%;
+}
+
+.jobcardmain > h2 {
+    margin-top: 1%;
+    font-size: 400%;
+    font-weight: 400;
+    text-align: center;
+}
+
+.whyus > h2 {
+    margin: 2% 0;
+    font-size: 400%;
+    font-weight: 400;
+    text-align: center;
+}
+
+.whyus {
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+.testimonial > h2 {
+    margin: 2% 0;
+    font-size: 400%;
+    font-weight: 400;
+    text-align: center;
+}
+
+.testimonialkeeper {
+    position: relative;
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+}
