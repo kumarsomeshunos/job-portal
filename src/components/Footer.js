@@ -123,10 +123,8 @@ const Footer = () => {
           className="text-center p-3"
           style={{ "border-top": "2px solid black" }}
         >
-          Made with love using
-          <a className="text-dark" href="#">
-            Open Source
-          </a>
+          © 2022 Manipal University, <a href="#">jaipur.manipal.edu</a>, Jaipur, Rajasthan
+          303007
         </div>
       </footer>
     </div>
