@@ -20,7 +20,11 @@
 }
 
 .navbar a {
-    font-size: 140%;
+    font-size: 130%;
+}
+
+.navbar-brand > img {
+    width: 50%;
 }
 
 .container-fluid {
@@ -43,10 +47,10 @@
 }
 
 .upperlayer>h1 {
-    font-size: 700%;
+    font-size: 5rem;
     font-weight: 600;
-    margin-left: 20px;
-    letter-spacing: 5px;
+    margin-left:1rem;
+    letter-spacing: 0.5rem;
     color: black;
 }
 
@@ -67,7 +71,7 @@
 
 .stats>div {
     margin: 0 20px;
-    font-size: 400%;
+    font-size: 3rem;
     font-weight: 400;
     border-bottom: 4px solid rgb(130, 37, 6);
 }
@@ -93,21 +97,21 @@
 
 .jobcardmain>h2 {
     margin-top: 1%;
-    font-size: 400%;
+    font-size: 3rem;
     font-weight: 400;
     text-align: center;
 }
 
 .whyus>h2 {
     margin: 2% 0;
-    font-size: 400%;
+    font-size: 3rem;
     font-weight: 400;
     text-align: center;
 }
 
 .testimonial>h2 {
     margin: 2% 0;
-    font-size: 400%;
+    font-size: 3rem;
     font-weight: 400;
     text-align: center;
 }

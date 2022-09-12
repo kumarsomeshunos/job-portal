@@ -8,8 +8,6 @@ const Navbar = () => {
           <img
             src="images/navbarlogo.jpeg"
             alt=""
-            width="300"
-            height="60"
             className="d-inline-block align-text-top"
           />
         </a>
