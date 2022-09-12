@@ -27,22 +27,22 @@ const Navbar = () => {
         <ul class="navbar-nav">
           <li className="nav-item">
             <a className="nav-link active" aria-current="page" href="/">
+              Home
+            </a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link" href="/apply">
               Apply
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="/stories">
+            <a className="nav-link" href="/openings">
               Openings
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">
+            <a className="nav-link" href="/contact">
               Contact
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">
-              About
             </a>
           </li>
           <li className="nav-item">
