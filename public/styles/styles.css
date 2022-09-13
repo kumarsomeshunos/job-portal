@@ -23,7 +23,7 @@
     font-size: 130%;
 }
 
-.navbar-brand > img {
+.navbar-brand>img {
     width: 250px;
 }
 
@@ -49,7 +49,7 @@
 .upperlayer>h1 {
     font-size: 5rem;
     font-weight: 600;
-    margin-left:1rem;
+    margin-left: 1rem;
     letter-spacing: 0.5rem;
     color: black;
 }
@@ -132,6 +132,94 @@ footer li img {
     width: 40px;
 }
 
-footer > .container {
+footer>.container {
     padding-bottom: 0 !important;
+}
+
+
+.log-input {
+    display: block;
+    width: 100%;
+    margin-top: 1rem;
+    padding: 0.4rem 0.5rem;
+    border-radius: 5px;
+    border: 1px solid rgb(231, 226, 226);
+}
+
+.main-form-div {
+    display: grid;
+    place-content: center;
+    height: 60vh;
+    background-image: url("https://jaipur.manipal.edu/content/dam/manipal/muj/images/HeroBanner/Hero-Banner.jpg");
+    background-repeat: no-repeat;
+}
+
+.form-bg {
+    width: 90vw;
+    max-width: 980px;
+    margin: 0 auto;
+    display: grid;
+    height: 300px;
+    align-items: center;
+    grid-template-columns: 40% 10% 50%;
+    padding: 0.5rem;
+}
+
+.line {
+    height: 250px;
+    width: 1px;
+    background-color: black;
+    justify-self: center;
+    margin: 1rem;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.log-form {
+    width: 300px;
+    /* justify-self: center; */
+    align-self: flex-start;
+    margin: 3rem;
+    text-align: center;
+}
+
+.log-form p {
+    margin-bottom: 1.2rem;
+}
+
+.btn {
+    border: none;
+    background-color: rgba(241, 238, 206, 0.383);
+    margin: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 0.5rem 0.75rem;
+}
+
+@media screen and (max-width: 876px) {
+    .line {
+        display: none;
+    }
+
+    .form-bg {
+        display: block;
+        max-width: 370px;
+    }
+
+    .img-muj {
+        height: 40%;
+    }
+
+    .log-form {
+        height: 55%;
+        margin: 0;
+    }
+
+    input {
+        margin-left: 1rem;
+    }
 }

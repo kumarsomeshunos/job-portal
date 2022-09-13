@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import Testimonial from "./components/Testimonial";
 import Form from "./components/Form";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import Login from "./components/Login";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
             }
           />
           <Route exact path="/apply" element={<Form />} />
+          <Route exact path="/admin" element={<Login />} />
         </Routes>
         <Footer />
       </div>
