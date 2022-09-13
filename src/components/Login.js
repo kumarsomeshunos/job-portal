@@ -26,7 +26,7 @@ const Login = () => {
             />
             <div className="btn-container">
             <button type="submit" className="btn">
-                Log In
+                <a href="/dashboard">Log In</a>
               </button>
               <button type="button" className="btn">
                 Forgot Password?

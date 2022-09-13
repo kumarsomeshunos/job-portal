@@ -8,6 +8,7 @@ import Testimonial from "./components/Testimonial";
 import Form from "./components/Form";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import Login from "./components/Login";
+import Dashboard from "./components/Dashboard";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
           />
           <Route exact path="/apply" element={<Form />} />
           <Route exact path="/admin" element={<Login />} />
+          <Route exact path="/admin/dashboard" element={<Dashboard />} />
         </Routes>
         <Footer />
       </div>
