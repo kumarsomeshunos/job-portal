@@ -150,8 +150,6 @@ footer>.container {
     display: grid;
     place-content: center;
     height: 60vh;
-    background-image: url("https://jaipur.manipal.edu/content/dam/manipal/muj/images/HeroBanner/Hero-Banner.jpg");
-    background-repeat: no-repeat;
 }
 
 .form-bg {

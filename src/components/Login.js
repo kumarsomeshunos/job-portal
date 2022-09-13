@@ -6,7 +6,7 @@ const Login = () => {
       <div className="form-bg">
         <div className="img-muj">
           <img
-            src="http://ickhi.in/wp-content/uploads/2022/02/MUJ-LOGOcolor.png"
+            src="images/cardimage.png"
             alt=""
           />
         </div>
