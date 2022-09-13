@@ -6,7 +6,7 @@ const Login = () => {
       <div className="form-bg">
         <div className="img-muj">
           <img
-            src="images/cardimage.png"
+            src="images/manipal-logo.png"
             alt=""
           />
         </div>

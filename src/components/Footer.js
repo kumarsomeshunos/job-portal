@@ -3,6 +3,7 @@ import React from "react";
 const Footer = () => {
   return (
     <div>
+      <hr />
       <footer className="text-center text-lg-start text-dark">
         <div className="container p-4">
           <div className="row my-4">
