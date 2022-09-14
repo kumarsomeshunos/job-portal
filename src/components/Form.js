@@ -46,8 +46,8 @@ const Form = () => {
         <p align="right">
           In case of any technical difficulties in accessing and/or submitting
           the application please write to us at{" "}
-          <a href="mailto:softwaresupport@amity.edu">
-            softwaresupport@amity.edu
+          <a href="mailto:softwaresupport@manipal.edu">
+            softwaresupport@manipal.edu
           </a>{" "}
         </p>
       </div>
@@ -58,7 +58,7 @@ const Form = () => {
             <div className="col-md-2 col-lg-2">
               <div className="form-group">
                 <label className="control-label">
-                  <sapn style={{ color: "red" }}>*</sapn> Campus Applying for{" "}
+                  <sapn style={{ color: "red" }}>*</sapn> Faculty{" "}
                 </label>
                 <select
                   className="form-control"
@@ -67,26 +67,19 @@ const Form = () => {
                   required="required"
                 >
                   <option value="">Select</option>
-                  <option value="Delhi NCR(Noida)"> Delhi NCR(Noida) </option>
-                  <option value="Greater Noida"> Greater Noida </option>
-                  <option value="Gurgaon"> Gurgaon </option>
-                  <option value="Gwalior"> Gwalior </option>
-                  <option value="Jaipur"> Jaipur </option>
-                  <option value="Kolkata"> Kolkata </option>
-                  <option value="Lucknow"> Lucknow </option>
-                  <option value="Mohali"> Mohali </option>
-                  <option value="Mumbai"> Mumbai </option>
-                  <option value="Patna"> Patna </option>
-                  <option value="Raipur"> Raipur </option>
-                  <option value="Ranchi"> Ranchi </option>
-                  <option value="Tashkent"> Tashkent </option>
+                  <option value="Delhi NCR(Noida)"> Faculty of Arts </option>
+                  <option value="Greater Noida"> Faculty of Design </option>
+                  <option value="Gurgaon"> Faculty of Engineering </option>
+                  <option value="Gwalior"> Faculty of Science </option>
+                  <option value="Jaipur"> Faculty of Management & Commerce </option>
+                  <option value="Kolkata"> Faculty of Law </option>
                 </select>
               </div>
             </div>
             <div className="col-md-2 col-lg-2">
               <div className="form-group">
                 <label className="control-label">
-                  <sapn style={{ color: "red" }}>*</sapn>Responsibility
+                  <sapn style={{ color: "red" }}>*</sapn>School
                 </label>
                 <select
                   className="form-control"
@@ -106,7 +99,7 @@ const Form = () => {
             <div className="col-md-2 col-lg-2">
               <div className="form-group">
                 <label className="control-label">
-                  <sapn style={{ color: "red" }}>*</sapn> Position
+                  <sapn style={{ color: "red" }}>*</sapn> Department
                 </label>
                 <select
                   className="form-control"
@@ -121,7 +114,7 @@ const Form = () => {
             <div className="col-md-2 col-lg-2">
               <div className="form-group">
                 <label className="control-label">
-                  <sapn style={{ color: "red" }}>*</sapn> Academic Domain{" "}
+                  <sapn style={{ color: "red" }}>*</sapn> Position{" "}
                 </label>
                 <select
                   className="form-control"
@@ -8941,20 +8934,20 @@ const Form = () => {
             <div className="col-md-2 col-lg-2">
               <div className="form-group">
                 <label className="control-label">
-                  Do You Know anyone in Amity ?
+                  Do You Know anyone in manipal ?
                 </label>
                 <div className="input-group">
                   <div className="btn-group radioBtn">
                     <a
                       className="btn btn-primary btn-sm notActive"
-                      data-toggle="AnyOneInAmity"
+                      data-toggle="AnyOneInmanipal"
                       data-title="Y"
                     >
                       Yes
                     </a>
                     <a
                       className="btn btn-primary btn-sm active"
-                      data-toggle="AnyOneInAmity"
+                      data-toggle="AnyOneInmanipal"
                       data-title="N"
                     >
                       No
@@ -8962,8 +8955,8 @@ const Form = () => {
                   </div>
                   <input
                     type="hidden"
-                    name="AnyOneInAmity"
-                    id="AnyOneInAmity"
+                    name="AnyOneInmanipal"
+                    id="AnyOneInmanipal"
                     defaultValue="N"
                   />
                 </div>
@@ -8974,8 +8967,8 @@ const Form = () => {
                 <label className="control-label">If yes?</label>
                 <input
                   type="hidden"
-                  id="KnowInAmityCount"
-                  name="KnowInAmityCount"
+                  id="KnowInmanipalCount"
+                  name="KnowInmanipalCount"
                 />
                 <div className="table-responsive">
                   <table className="table table-primary">
@@ -8988,7 +8981,7 @@ const Form = () => {
                         <th></th>
                       </tr>
                     </thead>
-                    <tbody id="KnowInAmityBody" />
+                    <tbody id="KnowInmanipalBody" />
                     <tfoot>
                       <tr>
                         <td>
@@ -8996,8 +8989,8 @@ const Form = () => {
                             <input
                               type="text"
                               className="form-control"
-                              id="AmityName"
-                              name="AmityName"
+                              id="manipalName"
+                              name="manipalName"
                             />
                           </label>
                         </td>
@@ -9006,8 +8999,8 @@ const Form = () => {
                             <input
                               type="text"
                               className="form-control"
-                              id="AmityDesignation"
-                              name="AmityDesignation"
+                              id="manipalDesignation"
+                              name="manipalDesignation"
                             />
                           </label>
                         </td>
@@ -9016,16 +9009,16 @@ const Form = () => {
                             <input
                               type="text"
                               className="form-control"
-                              id="AmityDepartment"
-                              name="AmityDepartment"
+                              id="manipalDepartment"
+                              name="manipalDepartment"
                             />
                           </label>
                         </td>
                         <td>
                           <select
                             className="form-control"
-                            id="DDLAmityCampus"
-                            name="DDLAmityCampus"
+                            id="DDLmanipalCampus"
+                            name="DDLmanipalCampus"
                           >
                             <option value="">Select</option>
                             <option value="Abu Dhabi"> Abu Dhabi </option>
@@ -9076,7 +9069,7 @@ const Form = () => {
                               type="button"
                               className="btn btn-success"
                               defaultValue="Add"
-                              id="BtnAddKnowInAmity"
+                              id="BtnAddKnowInmanipal"
                             />
                           </label>
                         </td>
@@ -9098,20 +9091,20 @@ const Form = () => {
             <div className="col-md-2 col-lg-2">
               <div className="form-group">
                 <label className="control-label">
-                  Have you ever been interviewed in Amity earlier?
+                  Have you ever been interviewed in manipal earlier?
                 </label>
                 <div className="input-group">
                   <div className="btn-group radioBtn">
                     <a
                       className="btn btn-primary btn-sm notActive"
-                      data-toggle="interviewedInAmity"
+                      data-toggle="interviewedInmanipal"
                       data-title="Y"
                     >
                       Yes
                     </a>
                     <a
                       className="btn btn-primary btn-sm active"
-                      data-toggle="interviewedInAmity"
+                      data-toggle="interviewedInmanipal"
                       data-title="N"
                     >
                       No
@@ -9119,8 +9112,8 @@ const Form = () => {
                   </div>
                   <input
                     type="hidden"
-                    name="interviewedInAmity"
-                    id="interviewedInAmity"
+                    name="interviewedInmanipal"
+                    id="interviewedInmanipal"
                     defaultValue="N"
                   />
                 </div>
@@ -9179,14 +9172,14 @@ const Form = () => {
                   <div className="btn-group radioBtn">
                     <a
                       className="btn btn-primary btn-sm notActive"
-                      data-toggle="offeredInAmity"
+                      data-toggle="offeredInmanipal"
                       data-title="Y"
                     >
                       Yes
                     </a>
                     <a
                       className="btn btn-primary btn-sm active"
-                      data-toggle="offeredInAmity"
+                      data-toggle="offeredInmanipal"
                       data-title="N"
                     >
                       No
@@ -9194,8 +9187,8 @@ const Form = () => {
                   </div>
                   <input
                     type="hidden"
-                    name="offeredInAmity"
-                    id="offeredInAmity"
+                    name="offeredInmanipal"
+                    id="offeredInmanipal"
                     defaultValue="N"
                   />
                 </div>
@@ -9208,14 +9201,14 @@ const Form = () => {
                   <div className="btn-group radioBtn">
                     <a
                       className="btn btn-primary btn-sm notActive"
-                      data-toggle="joinedInAmity"
+                      data-toggle="joinedInmanipal"
                       data-title="Y"
                     >
                       Yes
                     </a>
                     <a
                       className="btn btn-primary btn-sm active"
-                      data-toggle="joinedInAmity"
+                      data-toggle="joinedInmanipal"
                       data-title="N"
                     >
                       No
@@ -9223,8 +9216,8 @@ const Form = () => {
                   </div>
                   <input
                     type="hidden"
-                    name="joinedInAmity"
-                    id="joinedInAmity"
+                    name="joinedInmanipal"
+                    id="joinedInmanipal"
                     defaultValue="N"
                   />
                 </div>
@@ -9237,8 +9230,8 @@ const Form = () => {
                   type="text"
                   className="form-control  xyz"
                   autoComplete="off"
-                  id="joinedInAmityFrom"
-                  name="joinedInAmityFrom"
+                  id="joinedInmanipalFrom"
+                  name="joinedInmanipalFrom"
                 />
               </div>
             </div>
@@ -9249,8 +9242,8 @@ const Form = () => {
                   type="text"
                   className="form-control  xyz"
                   autoComplete="off"
-                  id="joinedInAmityTo"
-                  name="joinedInAmityTo"
+                  id="joinedInmanipalTo"
+                  name="joinedInmanipalTo"
                 />
               </div>
             </div>

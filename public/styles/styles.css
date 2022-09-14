@@ -244,6 +244,12 @@ img {
     border-radius: 2rem;
     margin: 0.5rem 1rem;
     padding: 0.5rem 1rem;
+    transition: all 0.25s ease-out;
+}
+
+.suggestions>.sugg:hover {
+    color: white;
+    background-color: black;
 }
 
 .realsort {
