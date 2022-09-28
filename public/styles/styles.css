@@ -22,7 +22,9 @@
 .navbar a {
   font-size: 130%;
 }
-
+.main-link {
+  text-decoration: none;
+}
 .navbar-brand > img {
   width: 250px;
 }
@@ -142,7 +144,7 @@
 .testimonialkeeper {
   display: flex;
   overflow-y: hidden;
-  overflow-x: scroll;
+  overflow-x: hidden;
   padding: 2% 2% 0% 2%;
 }
 
@@ -310,10 +312,20 @@ img {
 .main-accordian {
   width: 90vw;
   max-width: 1170px;
-  margin: 0 auto;
-  margin-top: 10rem;
+  margin: 10rem auto;
 }
 .acc {
   background-color: rgba(37, 68, 204, 0.068) !important;
-  border: 2px solid grey !important;
+  border: 1.5px solid rgb(78, 78, 78) !important;
+}
+@keyframes scroll {
+  from {
+    transform: translateX(300%);
+  }
+  to {
+    transform: translateX(-2000px);
+  }
+}
+.testimonialcard {
+  animation: scroll 10s infinite linear;
 }
