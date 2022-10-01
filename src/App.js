@@ -8,7 +8,7 @@ import Testimonial from "./components/Testimonial";
 import Form from "./components/Form";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import Login from "./components/Login";
-import Dashboard from "./components/Dashboard";
+import Dashboard from "./components/dashboard/Dashboard";
 import Openings from "./components/Openings";
 import JobDesc from "./components/JobDesc";
 
@@ -34,7 +34,7 @@ function App() {
           <Route exact path="/apply" element={<Form />} />
           <Route exact path="/admin" element={<Login />} />
           <Route exact path="/openings" element={<Openings />} />
-          <Route exact path="/admin/dashboard" element={<Dashboard />} />
+          <Route exact path="/dashboard" element={<Dashboard />} />
           <Route exact path="/opening" element={<JobDesc />} />
         </Routes>
         <Footer />
