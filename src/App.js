@@ -11,6 +11,7 @@ import Login from "./components/Login";
 import Dashboard from "./components/dashboard/Dashboard";
 import Openings from "./components/Openings";
 import JobDesc from "./components/JobDesc";
+import ApplicationsDetails from "./components/dashboard/ApplicationDetails";
 
 function App() {
   return (
@@ -35,6 +36,10 @@ function App() {
           <Route exact path="/admin" element={<Login />} />
           <Route exact path="/openings" element={<Openings />} />
           <Route exact path="/dashboard" element={<Dashboard />} />
+          <Route
+            path="/applicantdetails/:id"
+            element={<ApplicationsDetails />}
+          />
           <Route exact path="/opening" element={<JobDesc />} />
         </Routes>
         <Footer />
