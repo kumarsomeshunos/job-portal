@@ -36,14 +36,10 @@ function App() {
           <Route exact path="/admin" element={<Login />} />
           <Route exact path="/openings" element={<Openings />} />
           <Route exact path="/dashboard" element={<Dashboard />} />
-<<<<<<< Updated upstream
           <Route
             path="/applicantdetails/:id"
             element={<ApplicationsDetails />}
           />
-=======
-          <Route path="/users/:id" element={<ApplicationsDetails />} />
->>>>>>> Stashed changes
           <Route exact path="/opening" element={<JobDesc />} />
         </Routes>
         <Footer />
