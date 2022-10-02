@@ -12,6 +12,8 @@ import Dashboard from "./components/Dashboard";
 import Openings from "./components/Openings";
 import JobDesc from "./components/JobDesc";
 
+import Recognition from "./components/Recognition";
+
 function App() {
   return (
     <Router>
@@ -25,6 +27,7 @@ function App() {
               <div>
                 <Carousel />
                 <Stats />
+                <Recognition />
                 <JobCardMain />
                 <WhyUs />
                 <Testimonial />

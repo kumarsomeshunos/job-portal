@@ -1,4 +1,5 @@
 import React from "react";
+import {FaGithub} from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -107,8 +108,11 @@ const Footer = () => {
                 </li>
                 <li>
                   <p>
-                    <i className="fas fa-phone pe-2 "></i>1800 1020 128
+                  <i className="fas fa-phone pe-2 "></i>1800 1020 128
+  
+                   
                   </p>
+
                 </li>
                 <li>
                   <p>

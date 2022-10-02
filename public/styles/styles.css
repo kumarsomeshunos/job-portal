@@ -303,3 +303,18 @@ img {
     width: 20vw;
     margin-right: 20px;
 }
+
+
+/* accordian */
+.accordion{
+width: 100vw;
+
+}
+.accordion-item{
+    margin: 0.75rem;
+    border: 1px solid rgb(174, 30, 30);
+}
+.accordion-header{
+    border: 1px solid rgba(104, 102, 102, 0.585);
+    border-radius: 1%;
+}

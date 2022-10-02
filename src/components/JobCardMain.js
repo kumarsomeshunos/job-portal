@@ -7,11 +7,7 @@ const JobCardMain = () => {
       <h2>Latest Job Openings @ Manipal</h2>
       <div className="jobcardcollector">
         <JobCard />
-        <JobCard />
-        <JobCard />
-        <JobCard />
-        <JobCard />
-        <JobCard />
+       
       </div>
     </div>
   );
