@@ -4,16 +4,17 @@ import {
   GridToolbarContainer,
   GridToolbarExport,
 } from "@mui/x-data-grid";
-import { userColumns, userRows } from "./datatablesource";
+import { userColumns} from "./datatablesource";
+//userRows 
 import { Link } from "react-router-dom";
-import { useState } from "react";
+// import { useState } from "react";
 
-const Datatable = () => {
-  const [data, setData] = useState(userRows);
+const Datatable = (props) => {
+  // const [data, setData] = useState(props.data);
 
-  const handleDelete = (id) => {
-    setData(data.filter((item) => item.id !== id));
-  };
+  // const handleDelete = (id) => {
+  //   setData(data.filter((item) => item.id !== id));
+  // };
   function CustomToolbar() {
     return (
       <GridToolbarContainer>
@@ -36,12 +37,12 @@ const Datatable = () => {
             >
               <div className="viewButton">View</div>
             </Link>
-            <div
+            {/* <div
               className="deleteButton"
               onClick={() => handleDelete(params.row.id)}
             >
               Delete
-            </div>
+            </div> */}
           </div>
         );
       },
@@ -52,7 +53,7 @@ const Datatable = () => {
       <div className="datatableTitle">Applications</div>
       <DataGrid
         className="datagrid"
-        rows={data}
+        rows={props.data}
         columns={userColumns.concat(actionColumn)}
         pageSize={9}
         rowsPerPageOptions={[9]}

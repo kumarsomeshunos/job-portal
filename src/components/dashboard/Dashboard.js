@@ -2,8 +2,43 @@ import React from "react";
 import Widget from "./Widget";
 import "./dashboard.css";
 import Datatable from "./Datatable";
+import { useEffect, useCallback, useState } from "react";
 
 const Dashboard = () => {
+  const [data, setData] = useState([]);
+
+  const FetchingData = useCallback(async () => {
+    try {
+      await fetch("http://localhost:3001/applications")
+        .then((res) => {
+          if (!res.ok) {
+            throw new Error("Error Connecting to the database");
+          }
+          return res.json();
+        })
+        .then((val) => {
+          const values = val.results.map((ele) => {
+            return {
+              firstName: ele.applicant.firstName,
+              lastName: ele.applicant.lastName,
+              gender: ele.applicant.gender,
+              mobile: ele.applicant.mobile,
+              email: ele.applicant.email,
+              id: ele._id,
+              viewCount: ele.viewCount,
+              status: ele.status,
+            };
+          });
+          setData(values);
+        });
+    } catch (err) {
+      console.error(err.message);
+    }
+  }, []);
+  useEffect(() => {
+    FetchingData();
+  }, [FetchingData]);
+
   return (
     <React.Fragment>
       <div className="widgets">
@@ -13,7 +48,7 @@ const Dashboard = () => {
         <Widget title="Total Applicants" counter="750" />
       </div>
       <div className="listContainter">
-        <Datatable />
+        <Datatable data={data} />
       </div>
     </React.Fragment>
   );

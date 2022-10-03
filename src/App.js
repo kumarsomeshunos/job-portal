@@ -35,7 +35,7 @@ function App() {
           <Route exact path="/apply" element={<Form />} />
           <Route exact path="/admin" element={<Login />} />
           <Route exact path="/openings" element={<Openings />} />
-          <Route exact path="/dashboard" element={<Dashboard />} />
+          <Route exact path="/admin/dashboard" element={<Dashboard />} />
           <Route
             path="/applicantdetails/:id"
             element={<ApplicationsDetails />}
