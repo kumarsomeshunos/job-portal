@@ -7,6 +7,29 @@ import "./ApplicationDetails.css";
 const ApplicationsDetails = () => {
   const { id } = useParams();
   const [data, setData] = useState({});
+
+  const rejectApplication = async () => {
+    try {
+      const response = await fetch(
+        `http://localhost:3001/applications/${id}/reject`,
+        {
+          method: "POST",
+
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error(`Error! status: ${response.status}`);
+      }
+    } catch (err) {
+      console.error(`${err.message}`);
+    }
+  };
+
   const FetchingApplicant = useCallback(async () => {
     try {
       await fetch(`http://localhost:3001/applications/${id}`)
@@ -70,12 +93,11 @@ const ApplicationsDetails = () => {
         <Button variant="success" className="btn">
           HOD APPROVED
         </Button>
-        <Button variant="danger" className="btn">
+        <Button variant="danger" className="btn" onClick={rejectApplication}>
           REJECT
         </Button>
       </Card.Body>
     </Card>
   );
 };
-
 export default ApplicationsDetails;
