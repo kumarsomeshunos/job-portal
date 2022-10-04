@@ -9,7 +9,7 @@ const Dashboard = () => {
 
   const FetchingData = useCallback(async () => {
     try {
-      await fetch("http://localhost:3001/applications")
+      await fetch("http://jobmuj.projects.chirag.sh:3000/applications")
         .then((res) => {
           if (!res.ok) {
             throw new Error("Error Connecting to the database");
