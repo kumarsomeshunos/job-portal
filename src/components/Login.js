@@ -22,9 +22,18 @@ const Login = () => {
               placeholder='Enter Password'
               className='log-input'
             />
+<<<<<<< HEAD
             <div className='btn-container'>
               <button type='submit' className='btn'>
                 <a href='/dashboard'>Log In</a>
+=======
+            <div className="btn-container">
+            <button type="submit" className="btn">
+                <a href="/admin/dashboard">Log In</a>
+              </button>
+              <button type="button" className="btn">
+                Forgot Password?
+>>>>>>> Dashboard
               </button>
               <Button color={'yellow'} text={'forgot password'} />
             </div>
