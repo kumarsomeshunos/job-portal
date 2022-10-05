@@ -9,3 +9,15 @@
     width: 100%;
     flex: 6;
 }
+
+.applicationsTable tr {
+	height: 52px;
+}
+
+.filters label {
+  font-weight: 600;
+}
+
+.filters > div {
+  margin: 15px 0;
+}
