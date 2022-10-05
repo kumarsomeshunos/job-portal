@@ -8,25 +8,12 @@ import Testimonial from './components/Testimonial';
 import Form from './components/Form';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import Login from './components/Login';
-import Dashboard from './components/Dashboard';
+import Dashboard from './components/dashboard/Dashboard';
 import Openings from './components/Openings';
 import JobDesc from './components/JobDesc';
 import Faq from './components/FAQ';
 
 import Recognition from "./components/Recognition";
-import Carousel from "./components/Carousel";
-import Navbar from "./components/Navbar";
-import Stats from "./components/Stats";
-import JobCardMain from "./components/JobCardMain";
-import WhyUs from "./components/WhyUs";
-import Footer from "./components/Footer";
-import Testimonial from "./components/Testimonial";
-import Form from "./components/Form";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Login from "./components/Login";
-import Dashboard from "./components/dashboard/Dashboard";
-import Openings from "./components/Openings";
-import JobDesc from "./components/JobDesc";
 import ApplicationsDetails from "./components/dashboard/ApplicationDetails";
 
 function App() {
