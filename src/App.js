@@ -8,7 +8,7 @@ import Testimonial from './components/Testimonial';
 import Form from './components/Form';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import Login from './components/Login';
-import Dashboard from './components/dashboard/Dashboard';
+import Dashboard from './components/dashboardnew/Dashboard';
 import Openings from './components/Openings';
 import JobDesc from './components/JobDesc';
 import Faq from './components/FAQ';
