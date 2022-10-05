@@ -27,6 +27,7 @@ const Datatable = (props) => {
     {
       field: "action",
       headerName: "Action",
+      pagingType: "simple",
       width: 200,
       renderCell: (params) => {
         return (

@@ -11,7 +11,7 @@ const ApplicationsDetails = () => {
   const rejectApplication = async () => {
     try {
       const response = await fetch(
-        `http://jobmuj.projects.chirag.sh:3000/applications/${id}/reject`,
+        `http://localhost:3000/applications/${id}/reject`,
         {
           method: "POST",
 
@@ -32,7 +32,7 @@ const ApplicationsDetails = () => {
 
   const FetchingApplicant = useCallback(async () => {
     try {
-      await fetch(`http://jobmuj.projects.chirag.sh:3000/applications/${id}`)
+      await fetch(`http://localhost:3000/applications/${id}`)
         .then((res) => {
           if (!res.ok) {
             throw new Error("Error Connecting to the database");
