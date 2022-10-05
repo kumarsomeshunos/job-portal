@@ -1,305 +1,358 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;800&display=swap');
 
 * {
-    font-family: 'Work Sans', sans-serif;
-    box-sizing: border-box;
+  font-family: 'Work Sans', sans-serif;
+  box-sizing: border-box;
 }
 
 .navbar {
-    background-color: white;
-    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
 }
 
 .navbar button {
-    margin-right: 20px;
-    border: none;
+  margin-right: 20px;
+  border: none;
 }
 
 .navbar ul {
-    padding-left: 20px;
+  padding-left: 20px;
 }
 
 .navbar a {
-    font-size: 130%;
+  font-size: 130%;
 }
-
-.navbar-brand>img {
-    width: 250px;
+.main-link {
+  text-decoration: none;
+}
+.navbar-brand > img {
+  width: 250px;
 }
 
 .container-fluid {
-    padding: 0 !important;
-    padding-left: 20px !important;
+  padding: 0 !important;
+  padding-left: 20px !important;
 }
 
 #navbarSupportedContent {
-    padding-right: 20px;
+  padding-right: 20px;
 }
 
 .upperlayer {
-    position: absolute;
-    z-index: 999;
-    width: 50%;
-    height: 100%;
-    background: white;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(0, 0, 0, 0) 100%);
-    padding: 2% 0 2% 2%;
+  position: absolute;
+  z-index: 999;
+  width: 50%;
+  height: 100%;
+  background: white;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  padding: 2% 0 2% 2%;
 }
 
-.upperlayer>h1 {
-    font-size: 5rem;
-    font-weight: 600;
-    margin-left: 1rem;
-    letter-spacing: 0.5rem;
-    color: black;
+.upperlayer > h1 {
+  font-size: 5rem;
+  font-weight: 600;
+  margin-left: 1rem;
+  letter-spacing: 0.5rem;
+  color: black;
 }
 
-.upperlayer>h3 {
-    margin-left: 20px;
+.upperlayer > h3 {
+  margin-left: 20px;
 }
 
 .stats {
-    width: 100%;
-    min-height: 20vh;
-    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 0 2%;
-    align-items: center;
+  width: 100%;
+  min-height: 20vh;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 2%;
+  align-items: center;
 }
 
-.stats>div {
-    margin: 0 20px;
-    border-bottom: 4px solid rgb(130, 37, 6);
+.stats > div {
+  margin: 0 20px;
+  border-bottom: 4px solid rgb(130, 37, 6);
 }
 
 .stats h2 {
-    font-size: 3rem;
-    font-weight: 400;
+  font-size: 3rem;
+  font-weight: 400;
 }
 
 .stats p {
-    font-size: 1.2rem;
-    font-weight: 400;
+  font-size: 1.2rem;
+  font-weight: 400;
 }
 
 .card {
-    margin: 0 20px 20px 20px;
-    transition: all 0.5s ease-out;
+  margin: 0 20px 20px 20px;
+  transition: all 0.5s ease-out;
 }
 
 .card:hover {
-    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
 }
 
-.card>img {
-    position: absolute;
+.card > img {
+  position: absolute;
 }
 
 .jobcardcollector {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 2% 0 0 0;
-    margin: 0 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 2% 0 0 0;
+  margin: 0 20px;
 }
 
 .jobcardmain {
-    padding: 2% 2% 0% 2%;
+  padding: 2% 2% 0% 2%;
 }
 
-.jobcardmain>h2 {
-    margin-top: 1%;
-    font-size: 3rem;
-    font-weight: 400;
-    text-align: center;
+.jobcardmain > h2 {
+  margin-top: 1%;
+  font-size: 3rem;
+  font-weight: 400;
+  text-align: center;
 }
 
-.whyus>h2 {
-    margin: 2% 0;
-    font-size: 3rem;
-    font-weight: 400;
-    text-align: center;
+.whyus > h2 {
+  margin: 2% 0;
+  font-size: 3rem;
+  font-weight: 400;
+  text-align: center;
 }
 
-.testimonial>h2 {
-    margin: 2% 0;
-    font-size: 3rem;
-    font-weight: 400;
-    text-align: center;
+.testimonial > h2 {
+  margin: 2% 0;
+  font-size: 3rem;
+  font-weight: 400;
+  text-align: center;
 }
 
 .testimonialcard {
-    min-width: 500px;
+  min-width: 500px;
 }
 
 .testimonialkeeper {
-    display: flex;
-    overflow-y: hidden;
-    overflow-x: scroll;
-    padding: 2% 2% 0% 2%;
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  padding: 2% 2% 0% 2%;
 }
 
 footer li img {
-    width: 40px;
+  width: 40px;
 }
 
-footer>.container {
-    padding-bottom: 0 !important;
+footer > .container {
+  padding-bottom: 0 !important;
 }
-
 
 .log-input {
-    display: block;
-    width: 100%;
-    margin-top: 1rem;
-    padding: 0.4rem 0.5rem;
-    border-radius: 5px;
-    border: 1px solid rgb(231, 226, 226);
+  display: block;
+  width: 100%;
+  margin-top: 1rem;
+  padding: 0.4rem 0.5rem;
+  border-radius: 5px;
+  border: 1px solid rgb(231, 226, 226);
 }
 
 .main-form-div {
-    display: grid;
-    place-content: center;
-    height: 55vh;
-    background-image: url("https://jaipur.manipal.edu/content/dam/manipal/muj/images/HeroBanner/Hero-Banner.jpg");
+  display: grid;
+  place-content: center;
+  height: 55vh;
+  background-image: url('https://jaipur.manipal.edu/content/dam/manipal/muj/images/HeroBanner/Hero-Banner.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-
+@media screen and (max-width: 1100px) {
+  .main-form-div {
+    background-position: right;
+  }
+}
 .form-bg {
-    width: 90vw;
-    max-width: 980px;
-    margin: 0 auto;
-    display: grid;
-    height: 300px;
-    align-items: center;
-    grid-template-columns: 40% 10% 50%;
-    padding: 0.5rem;
+  width: 90vw;
+  max-width: 980px;
+  margin: 0 auto;
+  display: grid;
+  height: 300px;
+  align-items: center;
+  grid-template-columns: 40% 10% 50%;
+  padding: 0.5rem;
 }
 
 .line {
-    height: 250px;
-    width: 1px;
-    background-color: black;
-    justify-self: center;
-    margin: 1rem;
+  height: 250px;
+  width: 1px;
+  background-color: black;
+  justify-self: center;
+  margin: 1rem;
 }
 
 img {
-    height: 100%;
-    width: 100%;
-    object-fit: contain;
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
 }
 
 .log-form {
-    width: 300px;
-    /* justify-self: center; */
-    align-self: flex-start;
-    margin: 3rem;
-    text-align: center;
+  width: 300px;
+  /* justify-self: center; */
+  align-self: flex-start;
+  margin: 3rem;
+  text-align: center;
 }
 
 .log-form p {
-    margin-bottom: 1.2rem;
+  margin-bottom: 1.2rem;
 }
 
 .btn {
-    border: none;
-    background-color: rgba(241, 238, 206, 0.383);
-    margin: 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    padding: 0.5rem 0.75rem;
+  border: none;
+  background-color: rgba(241, 238, 206, 0.383);
+  margin: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 0.5rem 0.75rem;
 }
 
 @media screen and (max-width: 876px) {
-    .line {
-        display: none;
-    }
+  .line {
+    display: none;
+  }
 
-    .form-bg {
-        display: block;
-        max-width: 370px;
-    }
+  .form-bg {
+    display: block;
+    max-width: 370px;
+  }
 
-    .img-muj {
-        height: 40%;
-    }
+  .img-muj {
+    height: 40%;
+  }
 
-    .log-form {
-        height: 55%;
-        margin: 0;
-    }
+  .log-form {
+    height: 55%;
+    margin: 0;
+  }
 
-    input {
-        margin-left: 1rem;
-    }
+  input {
+    margin-left: 1rem;
+  }
 }
 
 .sortmain {
-    width: 100%;
+  width: 100%;
 }
 
 .suggestions {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-top: 1.5rem;
 }
 
-.suggestions>.sugg {
-    border: 1px solid black;
-    border-radius: 2rem;
-    margin: 0.5rem 1rem;
-    padding: 0.5rem 1rem;
-    transition: all 0.25s ease-out;
+.suggestions > .sugg {
+  border: 1px solid black;
+  border-radius: 2rem;
+  margin: 0.5rem 1rem;
+  padding: 0.5rem 1rem;
+  transition: all 0.25s ease-out;
 }
 
-.suggestions>.sugg:hover {
-    color: white;
-    background-color: black;
+.suggestions > .sugg:hover {
+  color: white;
+  background-color: black;
 }
 
 .realsort {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-items: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
-.realsort>.col-md-2 {
-    margin: 0.5rem 1rem;
+.realsort > .col-md-2 {
+  margin: 0.5rem 1rem;
 }
 
-.realsort>.col-md-2 .form-select{
-    border-radius: 2rem;
+.realsort > .col-md-2 .form-select {
+  border-radius: 2rem;
 }
 
 .openings > h2 {
-    margin: 2% 0;
-    font-size: 3rem;
-    font-weight: 400;
-    text-align: center;
+  margin: 2% 0;
+  font-size: 3rem;
+  font-weight: 400;
+  text-align: center;
 }
 
 .jobdescmain {
-    margin: 20px;
+  margin: 20px;
 }
 
-.jobdescmain > h2{
-    margin: 2% 0;
-    font-size: 3rem;
-    font-weight: 400;
-    text-align: center;
+.jobdescmain > h2 {
+  margin: 2% 0;
+  font-size: 3rem;
+  font-weight: 400;
+  text-align: center;
 }
 
 .jobdescfirst {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .jobdescimg > img {
+<<<<<<< HEAD
     width: 20vw;
     margin-right: 20px;
 }
+
+
+/* accordian */
+.accordion{
+width: 100vw;
+
+}
+.accordion-item{
+    margin: 0.75rem;
+    border: 1px solid rgb(174, 30, 30);
+}
+.accordion-header{
+    border: 1px solid rgba(104, 102, 102, 0.585);
+    border-radius: 1%;
+}
+=======
+  width: 20vw;
+  margin-right: 20px;
+}
+.main-accordian {
+  width: 90vw;
+  max-width: 1170px;
+  margin: 10rem auto;
+}
+.acc {
+  background-color: rgba(37, 68, 204, 0.068) !important;
+  border: 1.5px solid rgb(78, 78, 78) !important;
+}
+@keyframes scroll {
+  from {
+    transform: translateX(300%);
+  }
+  to {
+    transform: translateX(-2000px);
+  }
+}
+.testimonialcard {
+  animation: scroll 10s infinite linear;
+}
+>>>>>>> 3ea3ee33db64dd5129fa9a1ee3736f136a833c71
