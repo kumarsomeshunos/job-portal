@@ -13,8 +13,8 @@ import Openings from './components/Openings';
 import JobDesc from './components/JobDesc';
 import Faq from './components/FAQ';
 
-import Recognition from "./components/Recognition";
-import ApplicationsDetails from "./components/dashboard/ApplicationDetails";
+import Recognition from './components/Recognition';
+import ApplicationsDetails from './components/dashboard/ApplicationDetails';
 
 function App() {
   return (
@@ -36,15 +36,16 @@ function App() {
               </div>
             }
           />
-          <Route exact path="/apply" element={<Form />} />
-          <Route exact path="/admin" element={<Login />} />
-          <Route exact path="/openings" element={<Openings />} />
-          <Route exact path="/admin/dashboard" element={<Dashboard />} />
+          <Route exact path='/apply' element={<Form />} />
+          <Route exact path='/admin' element={<Login />} />
+          <Route exact path='/openings' element={<Openings />} />
+          <Route exact path='/admin/dashboard' element={<Dashboard />} />
           <Route
-            path="/applicantdetails/:id"
+            path='/applicantdetails/:id'
             element={<ApplicationsDetails />}
           />
-          <Route exact path="/opening" element={<JobDesc />} />
+          <Route exact path='/opening' element={<JobDesc />} />
+          <Route exact path='/faq' element={<Faq />} />
         </Routes>
         <Footer />
       </div>

@@ -58,11 +58,13 @@
   font-weight: 600;
   margin-left: 1rem;
   letter-spacing: 0.5rem;
+  margin-top: 1.5rem;
   color: black;
 }
 
 .upperlayer > h3 {
   margin-left: 20px;
+  font-weight: 300;
 }
 
 .stats {
@@ -82,7 +84,7 @@
 }
 
 .stats h2 {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 400;
 }
 
@@ -312,28 +314,21 @@ img {
 }
 
 .jobdescimg > img {
-<<<<<<< HEAD
-    width: 20vw;
-    margin-right: 20px;
-}
-
-
-/* accordian */
-.accordion{
-width: 100vw;
-
-}
-.accordion-item{
-    margin: 0.75rem;
-    border: 1px solid rgb(174, 30, 30);
-}
-.accordion-header{
-    border: 1px solid rgba(104, 102, 102, 0.585);
-    border-radius: 1%;
-}
-=======
   width: 20vw;
   margin-right: 20px;
+}
+
+/* accordian */
+.accordion {
+  width: 100vw;
+}
+.accordion-item {
+  margin: 0.75rem;
+  border: 1px solid rgb(174, 30, 30);
+}
+.accordion-header {
+  border: 1px solid rgba(104, 102, 102, 0.585);
+  border-radius: 1%;
 }
 .main-accordian {
   width: 90vw;
@@ -343,6 +338,12 @@ width: 100vw;
 .acc {
   background-color: rgba(37, 68, 204, 0.068) !important;
   border: 1.5px solid rgb(78, 78, 78) !important;
+}
+.muj-main-img {
+  width: 100%;
+  height: 29rem;
+  object-position: 50% bottom;
+  object-fit: cover;
 }
 @keyframes scroll {
   from {
@@ -355,4 +356,13 @@ width: 100vw;
 .testimonialcard {
   animation: scroll 10s infinite linear;
 }
->>>>>>> 3ea3ee33db64dd5129fa9a1ee3736f136a833c71
+.accordian-job {
+  margin: 1rem 5rem;
+}
+.acc {
+  width: 70vw;
+  margin: 1.2rem auto;
+  border-radius: 5px;
+}
+.hell {
+}

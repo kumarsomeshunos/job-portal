@@ -5,7 +5,7 @@ function Faq() {
     <>
       <div className='main-accordian'>
         <div className='accordian-container'>
-          <Accordion defaultActiveKey='0'>
+          <Accordion>
             <Accordion.Item eventKey='0' className='acc'>
               <Accordion.Header className='acc-header' className='hell'>
                 Accordion Item #1
