@@ -291,9 +291,9 @@ img {
   border-radius: 1%;
 }
 .main-accordian {
-  width: 90vw;
-  max-width: 1170px;
-  margin: 10rem auto;
+  width: 100vw;
+  margin: 5rem auto;
+  /* overflow-x: hidden; */
 }
 .acc {
   background-color: rgba(37, 68, 204, 0.068) !important;
