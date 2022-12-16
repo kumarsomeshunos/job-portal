@@ -250,8 +250,6 @@ img {
   }
 }
 
-
-
 .openings > h2 {
   margin: 2% 0;
   font-size: 3rem;
@@ -327,4 +325,8 @@ img {
   border-radius: 5px;
 }
 .hell {
+}
+.stat h2 div {
+  width: 100px !important;
+  display: inline;
 }
