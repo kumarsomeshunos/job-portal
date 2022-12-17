@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import "./ApplicationDetails.css";
+import Form from "../Form";
 
 const ApplicationsDetails = () => {
   const { id } = useParams();
@@ -42,6 +43,8 @@ const ApplicationsDetails = () => {
         .then((val) => {
           const objectprefix = val.applicant;
           const result = {
+            fname: objectprefix.firstName,
+            lname: objectprefix.lastName,
             name: objectprefix.firstName + " " + objectprefix.lastName,
             dob: objectprefix.dob,
             gender: objectprefix.dob,
@@ -49,14 +52,30 @@ const ApplicationsDetails = () => {
             marital: objectprefix.marital_status,
             mobile: objectprefix.mobile,
             email: objectprefix.email,
+            jobType: val.jobType,
+            faculty: val.faculty,
             school: val.school,
             dept: val.department,
             acaddom: val.acad_domain,
             cr_country: val.cr_country,
             cr_state: val.cr_state,
+            cr_city: val.cr_city,
             native_country: val.native_country,
+            native_state: val.native_state,
             aadhaar_card: val.aadhaar_card,
             pan_card: val.pan_card,
+            aq_higher_secondary: val.aq_higher_secondary.country,
+            aq_graduation: val.aq_graduation,
+            aq_post_graduation: val.aq_post_graduation,
+            aq_mphil: val.aq_mphil,
+            aq_phd: val.aq_phd,
+            aq_post_doctoral: val.aq_post_doctoral,
+            academicExperience: val.academicExperience,
+            fellowships: val.fellowships,
+            books: val.books,
+            peerRecognition: val.peerRecognition,
+            photo: val.photo,
+            resume: val.resume,
           };
           setData(result);
         });
@@ -68,36 +87,54 @@ const ApplicationsDetails = () => {
     FetchingApplicant();
   }, [FetchingApplicant]);
 
-  return (
-    <Card className="details">
-      <Card.Header>{`Application Number ${id}`}</Card.Header>
-      <Card.Body>
-        <Card.Title>{`Name : ${data.name}`}</Card.Title>
-        <hr></hr>
-        <Card.Text>
-          <h5>Applicant Details</h5>
-        </Card.Text>
-        <Card.Text>{`DOB : ${data.dob}`}</Card.Text>
-        <Card.Text>{`GENDER : ${data.gender}`}</Card.Text>
-        <Card.Text>{`Religion: ${data.religion}`}</Card.Text>
-        <Card.Text>{`Marital Status : ${data.marital}`}</Card.Text>
+  // return (
+  //   <Card className="details">
+  //     <Card.Header>{`Application Number ${id}`}</Card.Header>
+  //     <Card.Body>
+  //       <Card.Title>{`Name : ${data.name}`}</Card.Title>
+  //       <hr></hr>
+  //       <Card.Text>
+  //         <h5>Applicant Details</h5>
+  //       </Card.Text>
+  //       <Card.Text>{`DOB : ${data.dob}`}</Card.Text>
+  //       <Card.Text>{`GENDER : ${data.gender}`}</Card.Text>
+  //       <Card.Text>{`Religion: ${data.religion}`}</Card.Text>
+  //       <Card.Text>{`Marital Status : ${data.marital}`}</Card.Text>
 
-        <Card.Text>{`Mobile: ${data.mobile}`}</Card.Text>
-        <Card.Text>{`Email: ${data.email}`}</Card.Text>
-        <Button variant="success" className="btn">
-          HR APPROVED
+  //       <Card.Text>{`Mobile: ${data.mobile}`}</Card.Text>
+  //       <Card.Text>{`Email: ${data.email}`}</Card.Text>
+  //       <Button variant="success" className="btn">
+  //         HR APPROVED
+  //       </Button>
+  //       <Button variant="success" className="btn">
+  //         DEPT APPROVED
+  //       </Button>
+  //       <Button variant="success" className="btn">
+  //         HOD APPROVED
+  //       </Button>
+  //       <Button variant="danger" className="btn" onClick={rejectApplication}>
+  //         REJECT
+  //       </Button>
+  //     </Card.Body>
+  //   </Card>
+  // );
+  const openInNewTab = (url) => {
+    window.open(url, "_blank", "noopener,noreferrer");
+  };
+  return (
+    <>
+      <div className="details">
+        <h1>{data.name}</h1>
+        <br />
+        <Button variant="primary" onClick={() => openInNewTab(data.photo)}>
+          Photo
         </Button>
-        <Button variant="success" className="btn">
-          DEPT APPROVED
+        <Button variant="primary" onClick={() => openInNewTab(data.resume)}>
+          Resume
         </Button>
-        <Button variant="success" className="btn">
-          HOD APPROVED
-        </Button>
-        <Button variant="danger" className="btn" onClick={rejectApplication}>
-          REJECT
-        </Button>
-      </Card.Body>
-    </Card>
+      </div>
+      <Form disabled={true} data={data} />
+    </>
   );
 };
 export default ApplicationsDetails;

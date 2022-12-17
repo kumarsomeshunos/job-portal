@@ -13,10 +13,9 @@ import JobDesc from "./components/JobDesc";
 import Faq from "./components/FAQ";
 
 import Recognition from "./components/Recognition";
-import ApplicationDetails from "./components/admin/ApplicationDetails"
+import ApplicationDetails from "./components/admin/ApplicationDetails";
 // import Dashboard from "./components/dashboard/Dashboard";
 import ApplicationsTable from "./components/admin/applicationtable";
-
 
 function App() {
   return (
@@ -38,10 +37,14 @@ function App() {
               </div>
             }
           />
-          <Route exact path="/apply" element={<Form />} />
+          <Route exact path="/apply" element={<Form disabled={false} data={null} />} />
           <Route exact path="/admin" element={<Login />} />
           <Route exact path="/openings" element={<Openings />} />
-          <Route exact path="/admin/dashboard" element={<ApplicationsTable />} />
+          <Route
+            exact
+            path="/admin/dashboard"
+            element={<ApplicationsTable />}
+          />
           <Route
             path="/dashboard/application/:id"
             element={<ApplicationDetails />}

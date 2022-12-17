@@ -1,6 +1,6 @@
 import React from "react";
 
-const PartOne = () => {
+const PartOne = (props) => {
   return (
     <>
       <hr />
@@ -8,23 +8,30 @@ const PartOne = () => {
         <label htmlFor="validationCustom04" className="form-label">
           Faculty
         </label>
-        <select className="form-select" id="validationCustom04" required="">
+        <select
+          className="form-select"
+          id="validationCustom04"
+          required=""
+          value={props?.data?.faculty}
+        >
           <option selected="" disabled="" value="">
             Choose...
           </option>
           <option>...</option>
+          <option>FAC</option>
         </select>
-        <div className="invalid-feedback">Please select a valid state.</div>
+        <div className="invalid-feedback">Please select a faculty.</div>
       </div>
       <div className="col-md-3">
         <label htmlFor="validationCustom04" className="form-label">
           School
         </label>
-        <select className="form-select" id="validationCustom04" required="">
+        <select className="form-select" id="validationCustom04" required=""  value={props?.data?.school}>
           <option selected="" disabled="" value="">
             Choose...
           </option>
           <option>...</option>
+          <option>schl</option>
         </select>
         <div className="invalid-feedback">Please select a valid state.</div>
       </div>
@@ -32,11 +39,12 @@ const PartOne = () => {
         <label htmlFor="validationCustom04" className="form-label">
           Department
         </label>
-        <select className="form-select" id="validationCustom04" required="">
+        <select className="form-select" id="validationCustom04" required=""  value={props?.data?.dept}>
           <option selected="" disabled="" value="">
             Choose...
           </option>
           <option>...</option>
+          <option>DPT</option>
         </select>
         <div className="invalid-feedback">Please select a valid state.</div>
       </div>
@@ -44,11 +52,12 @@ const PartOne = () => {
         <label htmlFor="validationCustom04" className="form-label">
           Academic Domain
         </label>
-        <select className="form-select" id="validationCustom04" required="">
+        <select className="form-select" id="validationCustom04" required=""  value={props?.data?.acaddom}>
           <option selected="" disabled="" value="">
             Choose...
           </option>
           <option>...</option>
+          <option>Hmm</option>
         </select>
         <div className="invalid-feedback">Please select a valid state.</div>
       </div>
