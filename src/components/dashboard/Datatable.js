@@ -1,12 +1,12 @@
 import "./datatable.scss";
 import {
   DataGrid,
-  GridToolbarContainer,
-  GridToolbarExport,
+  GridToolbar
 } from "@mui/x-data-grid";
 import { userColumns} from "./datatablesource";
 //userRows 
 import { Link } from "react-router-dom";
+import { Grid } from "@mui/material";
 // import { useState } from "react";
 
 const Datatable = (props) => {
@@ -15,13 +15,13 @@ const Datatable = (props) => {
   // const handleDelete = (id) => {
   //   setData(data.filter((item) => item.id !== id));
   // };
-  function CustomToolbar() {
-    return (
-      <GridToolbarContainer>
-        <GridToolbarExport />
-      </GridToolbarContainer>
-    );
-  }
+  // function CustomToolbar() {
+  //   return (
+  //     <GridToolbarContainer>
+  //       <GridToolbarExport />
+  //     </GridToolbarContainer>
+  //   );
+  // }
 
   const actionColumn = [
     {
@@ -58,8 +58,13 @@ const Datatable = (props) => {
         pageSize={9}
         rowsPerPageOptions={[9]}
         components={{
-          Toolbar: CustomToolbar,
+          Toolbar: GridToolbar,
         }}
+        componentsProps={{
+          toolbar: {
+            showQuickFilter: true,
+            quickFilterProps: { debounceMs: 500 },
+          },}}
       />
     </div>
   );

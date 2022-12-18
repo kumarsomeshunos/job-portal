@@ -1,6 +1,6 @@
 import React from "react";
 
-const PartTwo = () => {
+const PartTwo = (props) => {
   return (
     <>
       <hr />
@@ -13,6 +13,7 @@ const PartTwo = () => {
           className="form-control"
           id="validationCustom01"
           required=""
+          defaultValue={props?.data?.fname}
         />
         <div className="valid-feedback">Looks good!</div>
       </div>
@@ -25,6 +26,7 @@ const PartTwo = () => {
           className="form-control"
           id="validationCustom02"
           required=""
+          defaultValue={props?.data?.lname}
         />
         <div className="valid-feedback">Looks good!</div>
       </div>
@@ -37,6 +39,7 @@ const PartTwo = () => {
           className="form-control"
           id="validationCustom02"
           required=""
+          defaultValue={props?.data?.dob}
         />
         <div className="valid-feedback">Looks good!</div>
       </div>
@@ -71,6 +74,7 @@ const PartTwo = () => {
             id="validationCustomUsername"
             aria-describedby="inputGroupPrepend"
             required=""
+            defaultValue={props?.data?.mobile}
           />
           <div className="invalid-feedback">
             Please enter your phone number.
@@ -86,6 +90,7 @@ const PartTwo = () => {
           className="form-control"
           id="validationCustom03"
           required=""
+          defaultValue={props?.data?.email}
         />
         <div className="invalid-feedback">Please provide your email.</div>
       </div>
@@ -97,11 +102,17 @@ const PartTwo = () => {
         <label htmlFor="validationCustom04" className="form-label">
           Country
         </label>
-        <select className="form-select" id="validationCustom04" required="">
+        <select
+          className="form-select"
+          id="validationCustom04"
+          required=""
+          value={props?.data?.cr_country}
+        >
           <option selected="" disabled="" value="">
             Choose...
           </option>
           <option>...</option>
+          <option>India</option>
         </select>
         <div className="invalid-feedback">Please select a valid state.</div>
       </div>
@@ -109,11 +120,17 @@ const PartTwo = () => {
         <label htmlFor="validationCustom04" className="form-label">
           State
         </label>
-        <select className="form-select" id="validationCustom04" required="">
+        <select
+          className="form-select"
+          id="validationCustom04"
+          required=""
+          value={props?.data?.cr_state}
+        >
           <option selected="" disabled="" value="">
             Choose...
           </option>
           <option>...</option>
+          <option>Delhi</option>
         </select>
         <div className="invalid-feedback">Please select a valid state.</div>
       </div>
@@ -126,6 +143,7 @@ const PartTwo = () => {
           className="form-control"
           id="validationCustom03"
           required=""
+          value={props?.data?.cr_city}
         />
         <div className="invalid-feedback">Please provide your email.</div>
       </div>
@@ -137,11 +155,17 @@ const PartTwo = () => {
         <label htmlFor="validationCustom04" className="form-label">
           Country
         </label>
-        <select className="form-select" id="validationCustom04" required="">
+        <select
+          className="form-select"
+          id="validationCustom04"
+          required=""
+          value={props?.data?.native_country}
+        >
           <option selected="" disabled="" value="">
             Choose...
           </option>
           <option>...</option>
+          <option>India</option>
         </select>
         <div className="invalid-feedback">Please select a valid state.</div>
       </div>
@@ -149,11 +173,17 @@ const PartTwo = () => {
         <label htmlFor="validationCustom04" className="form-label">
           State
         </label>
-        <select className="form-select" id="validationCustom04" required="">
+        <select
+          className="form-select"
+          id="validationCustom04"
+          required=""
+          value={props?.data?.native_state}
+        >
           <option selected="" disabled="" value="">
             Choose...
           </option>
           <option>...</option>
+          <option>Delhi</option>
         </select>
         <div className="invalid-feedback">Please select a valid state.</div>
       </div>
@@ -162,11 +192,22 @@ const PartTwo = () => {
         <label htmlFor="validationCustom04" className="form-label">
           Religion
         </label>
-        <select className="form-select" id="validationCustom04" required="">
+        <select
+          className="form-select"
+          id="validationCustom04"
+          required=""
+          value={props?.data?.religion}
+        >
           <option selected="" disabled="" value="">
             Choose...
           </option>
           <option>...</option>
+          <option>Hindu</option>
+          <option>Muslim</option>
+          <option>Sikh</option>
+          <option>Christian</option>
+          <option>Jain</option>
+          <option>Others</option>
         </select>
         <div className="invalid-feedback">Please select a valid state.</div>
       </div>
@@ -206,6 +247,7 @@ const PartTwo = () => {
           className="form-control"
           id="validationCustom03"
           required=""
+          value={props?.data?.aadhaar_card}
         />
         <div className="invalid-feedback">Please provide your email.</div>
       </div>
@@ -218,8 +260,11 @@ const PartTwo = () => {
           className="form-control"
           id="validationCustom03"
           required=""
+          value={props?.data?.pan_card}
         />
-        <div className="invalid-feedback">Please provide your email.</div>
+        <div className="invalid-feedback">
+          Please provide your pan card number.
+        </div>
       </div>
     </>
   );

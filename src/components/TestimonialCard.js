@@ -1,7 +1,6 @@
 import React from 'react';
 
 const TestimonialCard = ({ hello }) => {
-  console.log(hello);
   return (
     <div className='testimonialcard'>
       <div className='card mb-3' style={{ 'max-width': '540px' }}>
