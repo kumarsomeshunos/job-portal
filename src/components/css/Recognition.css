@@ -1,5 +1,5 @@
 body {
-  background-color: black;
+  background-color: white;
 }
 @keyframes scroll {
   0% {
@@ -27,7 +27,7 @@ body {
     rgb(255, 255, 255) 0%,
     rgba(237, 163, 89, 0) 100%
   );
-  content: '';
+  content: "";
   height: 30px;
   position: absolute;
   width: 200px;
