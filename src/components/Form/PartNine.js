@@ -39,9 +39,6 @@ const PartNine = () => {
         </select>
         <div className='valid-feedback'>Looks good!</div>
       </div>
-      <div className='col-md-2'>
-        <button className='btn btn-success'>Add More</button>
-      </div>
     </>
   );
 };

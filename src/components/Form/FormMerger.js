@@ -5,9 +5,10 @@ import PartThree from './PartThree';
 import PartFour from './PartFour';
 import PartFive from './PartFive';
 import PartSeven from './PartSeven';
-import PartTen from './PartTen';
+import PartTwelve from './PartTwelve';
 import PartSix from './PartSix';
 import PartEight from './PartEight';
+import PartNine from './PartNine';
 
 const FormMerger = () => {
   return (
@@ -34,9 +35,9 @@ const FormMerger = () => {
         </h1>
         <PartEight />
         <h1>9. Patent Details (in last three years) </h1>
-        <PartTen />
+        <PartNine />
         <h1>12. Other Information </h1>
-        <PartTen />
+        <PartTwelve />
         <div className='col-12'>
           <div className='form-check'>
             <input
