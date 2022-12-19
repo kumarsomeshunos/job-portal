@@ -10,6 +10,7 @@ const JobCard = () => {
             Accordion Item #1
           </Accordion.Header>
           <Accordion.Body>
+            <img src='./images/img-carrers@muj.jpeg' alt='' />
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -24,6 +25,7 @@ const JobCard = () => {
             Accordion Item #2
           </Accordion.Header>
           <Accordion.Body>
+            <img src='./images/img-carrers@muj.jpeg' alt='' />
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -36,6 +38,7 @@ const JobCard = () => {
         <Accordion.Item eventKey='2' className='acc'>
           <Accordion.Header>Accordion Item #2</Accordion.Header>
           <Accordion.Body>
+            <img src='./images/img-carrers@muj.jpeg' alt='' />
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -48,6 +51,7 @@ const JobCard = () => {
         <Accordion.Item eventKey='3' className='acc'>
           <Accordion.Header>Accordion Item #2</Accordion.Header>
           <Accordion.Body>
+            <img src='./images/img-carrers@muj.jpeg' alt='' />
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -60,6 +64,7 @@ const JobCard = () => {
         <Accordion.Item eventKey='4' className='acc'>
           <Accordion.Header>Accordion Item #2</Accordion.Header>
           <Accordion.Body>
+            <img src='./images/img-carrers@muj.jpeg' alt='' />
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -72,6 +77,7 @@ const JobCard = () => {
         <Accordion.Item eventKey='5' className='acc'>
           <Accordion.Header>Accordion Item #2</Accordion.Header>
           <Accordion.Body>
+            <img src='./images/img-carrers@muj.jpeg' alt='' />
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -84,6 +90,7 @@ const JobCard = () => {
         <Accordion.Item eventKey='6' className='acc'>
           <Accordion.Header>Accordion Item #2</Accordion.Header>
           <Accordion.Body>
+            <img src='./images/img-carrers@muj.jpeg' alt='' />
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -96,6 +103,7 @@ const JobCard = () => {
         <Accordion.Item eventKey='7' className='acc'>
           <Accordion.Header>Accordion Item #2</Accordion.Header>
           <Accordion.Body>
+            <img src='./images/img-carrers@muj.jpeg' alt='' />
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -108,6 +116,7 @@ const JobCard = () => {
         <Accordion.Item eventKey='8' className='acc'>
           <Accordion.Header>Accordion Item #2</Accordion.Header>
           <Accordion.Body>
+            <img src='./images/img-carrers@muj.jpeg' alt='' />
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
