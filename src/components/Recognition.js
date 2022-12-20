@@ -1,4 +1,5 @@
 import React from "react";
+import "./css/Recognition.css"
 const Recognition = () => {
     return (
         <div class="slider">

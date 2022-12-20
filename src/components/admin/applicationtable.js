@@ -2,30 +2,20 @@ import PropTypes from "prop-types";
 import { useState, useEffect, useCallback } from "react";
 import React from "react";
 
-import { useSelector } from "react-redux";
+// import { useSelector } from "react-redux";
 // import axios from 'axios';
 
 // material-ui
-import { useTheme } from "@mui/material/styles";
-import {
-  DataGrid,
-  GridColDef,
-  GridValueGetterParams,
-  GridToolbar,
-  GridCsvExportOptions,
-} from "@mui/x-data-grid";
+// import { useTheme } from "@mui/material/styles";
+import { DataGrid, GridColDef, GridToolbar } from "@mui/x-data-grid";
 import {
   Button,
   Chip,
-  Box,
   Grid,
   MenuItem,
-  TextField,
   InputLabel,
-  FormHelperText,
   FormControl,
   Select,
-  Typography,
   Avatar,
   LinearProgress,
 } from "@mui/material";
@@ -375,7 +365,7 @@ const ApplicationsTable = ({ isLoading }) => {
       </Grid>
       <Grid container>
         <Grid item xs={12}>
-          <div style={{ height: 800, width: "100%" }}>
+          <div style={{ height: 600, width: "100%" }}>
             <DataGrid
               rows={applicantList}
               columns={columns}

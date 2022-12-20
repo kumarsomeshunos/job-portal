@@ -11,6 +11,8 @@ import Login from "./components/Login";
 import Openings from "./components/Openings";
 import JobDesc from "./components/JobDesc";
 import Faq from "./components/FAQ";
+import "./components/css/styles.css"
+
 
 import Recognition from "./components/Recognition";
 import ApplicationDetails from "./components/admin/ApplicationDetails";

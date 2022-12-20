@@ -1,0 +1,334 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;800&display=swap");
+body {
+  overflow-x: hidden;
+}
+* {
+  font-family: "Work Sans", sans-serif;
+  box-sizing: border-box;
+
+}
+
+.navbar {
+  background-color: white;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar button {
+  margin-right: 20px;
+  border: none;
+}
+
+.navbar ul {
+  padding-left: 20px;
+}
+
+.navbar a {
+  font-size: 130%;
+}
+.main-link {
+  text-decoration: none;
+}
+.navbar-brand > img {
+  width: 250px;
+}
+
+.container-fluid {
+  padding: 0 !important;
+  padding-left: 20px !important;
+}
+
+#navbarSupportedContent {
+  padding-right: 20px;
+}
+
+.upperlayer {
+  position: absolute;
+  z-index: 999;
+  width: 50%;
+  height: 100%;
+  background: white;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  padding: 2% 0 2% 2%;
+}
+
+.upperlayer > h1 {
+  font-size: 5rem;
+  font-weight: 600;
+  margin-left: 1rem;
+  letter-spacing: 0.5rem;
+  margin-top: 1.5rem;
+  color: black;
+}
+
+.upperlayer > h3 {
+  margin-left: 20px;
+  font-weight: 300;
+}
+
+.stats {
+  width: 100%;
+  min-height: 20vh;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 2%;
+  align-items: center;
+}
+
+.stats > div {
+  margin: 0 20px;
+  border-bottom: 4px solid rgb(130, 37, 6);
+}
+
+.stats h2 {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.stats p {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.card {
+  margin: 0 20px 20px 20px;
+  transition: all 0.5s ease-out;
+}
+
+.card:hover {
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card > img {
+  position: absolute;
+}
+
+.jobcardcollector {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 2% 0 0 0;
+  margin: 0 20px;
+}
+
+.jobcardmain {
+  padding: 2% 2% 0% 2%;
+}
+
+.jobcardmain > h2 {
+  margin-top: 1%;
+  font-size: 3rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+.whyus > h2 {
+  margin: 2% 0;
+  font-size: 3rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+.testimonial > h2 {
+  margin: 2% 0;
+  font-size: 3rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+.testimonialcard {
+  min-width: 500px;
+}
+
+.testimonialkeeper {
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  padding: 2% 2% 0% 2%;
+}
+
+footer li img {
+  width: 40px;
+}
+
+footer > .container {
+  padding-bottom: 0 !important;
+}
+
+.log-input {
+  display: block;
+  width: 100%;
+  margin-top: 1rem;
+  padding: 0.4rem 0.5rem;
+  border-radius: 5px;
+  border: 1px solid rgb(231, 226, 226);
+}
+
+.main-form-div {
+  display: grid;
+  place-content: center;
+  height: 55vh;
+  background-image: url("https://jaipur.manipal.edu/content/dam/manipal/muj/images/HeroBanner/Hero-Banner.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media screen and (max-width: 1100px) {
+  .main-form-div {
+    background-position: right;
+  }
+}
+.form-bg {
+  width: 90vw;
+  max-width: 980px;
+  margin: 0 auto;
+  display: grid;
+  height: 300px;
+  align-items: center;
+  grid-template-columns: 40% 10% 50%;
+  padding: 0.5rem;
+}
+
+.line {
+  height: 250px;
+  width: 1px;
+  background-color: black;
+  justify-self: center;
+  margin: 1rem;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.log-form {
+  width: 300px;
+  /* justify-self: center; */
+  align-self: flex-start;
+  margin: 3rem;
+  text-align: center;
+}
+
+.log-form p {
+  margin-bottom: 1.2rem;
+}
+
+.btn {
+  border: none;
+  background-color: rgba(241, 238, 206, 0.383);
+  margin: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 0.5rem 0.75rem;
+}
+
+@media screen and (max-width: 876px) {
+  .line {
+    display: none;
+  }
+
+  .form-bg {
+    display: block;
+    max-width: 370px;
+  }
+
+  .img-muj {
+    height: 40%;
+  }
+
+  .log-form {
+    height: 55%;
+    margin: 0;
+  }
+
+  input {
+    margin-left: 1rem;
+  }
+}
+
+.openings > h2 {
+  margin: 2% 0;
+  font-size: 3rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+.jobdescmain {
+  margin: 20px;
+}
+
+.jobdescmain > h2 {
+  margin: 2% 0;
+  font-size: 3rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+.jobdescfirst {
+  display: flex;
+  justify-content: space-between;
+}
+
+.jobdescimg > img {
+  width: 20vw;
+  margin-right: 20px;
+}
+
+/* accordian */
+.accordion {
+  width: 100vw;
+}
+.accordion-item {
+  margin: 0.75rem;
+  border: 1px solid rgb(174, 30, 30);
+}
+.accordion-header {
+  border: 1px solid rgba(104, 102, 102, 0.585);
+  border-radius: 1%;
+}
+.main-accordian {
+  width: 100vw;
+  margin: 5rem auto;
+  /* overflow-x: hidden; */
+}
+.acc {
+  background-color: rgba(37, 68, 204, 0.068) !important;
+  border: 1.5px solid rgb(78, 78, 78) !important;
+}
+.muj-main-img {
+  width: 100%;
+  height: 29rem;
+  object-position: 50% bottom;
+  object-fit: cover;
+}
+@keyframes scroll {
+  from {
+    transform: translateX(300%);
+  }
+  to {
+    transform: translateX(-2000px);
+  }
+}
+.testimonialcard {
+  animation: scroll 10s infinite linear;
+}
+.accordian-job {
+  margin: 1rem 5rem;
+}
+.acc {
+  width: 70vw;
+  margin: 1.2rem auto;
+  border-radius: 5px;
+}
+
+.stat h2 div {
+  width: 100px !important;
+  display: inline;
+}

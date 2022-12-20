@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useCallback } from "react";
 import { useParams } from "react-router-dom";
 import Button from "react-bootstrap/Button";
-import Card from "react-bootstrap/Card";
+// import Card from "react-bootstrap/Card";
 import "./ApplicationDetails.css";
 import Form from "../Form";
 
@@ -33,7 +33,18 @@ const ApplicationsDetails = () => {
 
   const FetchingApplicant = useCallback(async () => {
     try {
-      await fetch(`http://jobmuj.projects.chirag.sh:3000/applications/${id}`)
+      await fetch(
+        `http://jobmuj.projects.chirag.sh:3000/applications/${id}`,
+        // NEW - add a Content-Type header
+        {
+          method: "GET",
+
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+        }
+      )
         .then((res) => {
           if (!res.ok) {
             throw new Error("Error Connecting to the database");
