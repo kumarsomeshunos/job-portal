@@ -25,7 +25,14 @@ import { SelectChangeEvent } from "@mui/material/Select";
 // import SkeletonTotalGrowthBarChart from 'ui-component/cards/Skeleton/TotalGrowthBarChart';
 // import MainCard from 'ui-component/cards/MainCard';
 // import { gridSpacing } from 'store/constant';
-import { jobTypeOptions, statusOptions, statusColor } from "./constants";
+import {
+  jobTypeOptions,
+  statusOptions,
+  statusColor,
+  departmentOptions,
+  schoolOptions,
+  facultiesOptions,
+} from "./constants";
 import classes from "./ApplicationTable.module.css";
 
 // ==============================|| DASHBOARD DEFAULT - TOTAL GROWTH BAR CHART ||============================== //
@@ -43,7 +50,7 @@ const ApplicationsTable = ({ isLoading }) => {
   const [departmentSelect, setDepartmentSelect] = useState([""]);
 
   const [applicantList, setApplicantList] = useState([]);
-  const [stats, setStats] = useState([]);
+  const [, setStats] = useState([]);
   const [dateRange, setDateRange] = useState({ start: "", end: "" });
   const [searchQuery, setSearchQuery] = useState("");
   const [searchName, setSearchName] = useState("");
@@ -54,7 +61,9 @@ const ApplicationsTable = ({ isLoading }) => {
     department: "",
     status: "",
   });
-
+  const openInNewTab = (url) => {
+    window.open(url, "_blank", "noopener,noreferrer");
+  };
   const FetchingData = useCallback(async () => {
     console.log(encodeURIComponent(filters.department));
 
@@ -273,10 +282,10 @@ const ApplicationsTable = ({ isLoading }) => {
               label="Faculty"
               onChange={(e) => handleFacultyChange(e)}
             >
-              {facultiesSelect?.map((option) => {
+              {facultiesOptions?.map((option) => {
                 return (
-                  <MenuItem key={option} value={option}>
-                    {option}
+                  <MenuItem key={option.value} value={option.value}>
+                    {option.label ?? option.value}
                   </MenuItem>
                 );
               })}
@@ -293,10 +302,10 @@ const ApplicationsTable = ({ isLoading }) => {
               label="School"
               onChange={(e) => handleSchoolChange(e)}
             >
-              {schoolSelect?.map((option) => {
+              {schoolOptions?.map((option) => {
                 return (
-                  <MenuItem key={option} value={option}>
-                    {option}
+                  <MenuItem key={option.value} value={option.value}>
+                    {option.label ?? option.value}
                   </MenuItem>
                 );
               })}
@@ -311,10 +320,10 @@ const ApplicationsTable = ({ isLoading }) => {
               label="Faculty"
               onChange={(e) => handleDepartmentChange(e)}
             >
-              {departmentSelect?.map((option) => {
+              {departmentOptions?.map((option) => {
                 return (
-                  <MenuItem key={option} value={option}>
-                    {option}
+                  <MenuItem key={option.value} value={option.value}>
+                    {option.label ?? option.value}
                   </MenuItem>
                 );
               })}
@@ -361,6 +370,17 @@ const ApplicationsTable = ({ isLoading }) => {
             </Select>
             {/* <FormHelperText>Read only</FormHelperText> */}
           </FormControl>
+        </Grid>
+        <Grid item xs={12} md={4}>
+          <Button
+            variant="contained"
+            color="primary"
+            size="large"
+            style={{ marginLeft: "10px", width: "70%", marginTop: "15px" }}
+            onClick={() => openInNewTab("http://localhost:3000/admin/joblisting")}
+          >
+            Add New Job Listing
+          </Button>
         </Grid>
       </Grid>
       <Grid container>

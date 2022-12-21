@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useCallback } from "react";
 import { useParams } from "react-router-dom";
-import Button from "react-bootstrap/Button";
+import { Button } from "@mui/material";
 // import Card from "react-bootstrap/Card";
 import "./ApplicationDetails.css";
 import Form from "../Form";
@@ -133,19 +133,39 @@ const ApplicationsDetails = () => {
     window.open(url, "_blank", "noopener,noreferrer");
   };
   return (
-    <>
-      <div className="details">
-        <h1>{data.name}</h1>
-        <br />
-        <Button variant="primary" onClick={() => openInNewTab(data.photo)}>
-          Photo
-        </Button>
-        <Button variant="primary" onClick={() => openInNewTab(data.resume)}>
-          Resume
-        </Button>
+    <div>
+      <div className="row details">
+        <div className="col-lg-4"><h3 className="title">{data.name}</h3> </div>
+        <div className="col-lg-4">
+          <img src={data.photo} className="applicantphoto" />
+        </div>
+      </div>
+      <div className="row details">
+        <div className="col-lg-4">
+          {" "}
+          <Button
+            variant="contained"
+            color="primary"
+            size="small"
+            className="btn"
+            onClick={() => openInNewTab(data.photo)}
+          >
+            Download Photo
+          </Button>
+          {" "}
+          <Button
+            variant="contained"
+            color="primary"
+            size="small"
+            className="btn"
+            onClick={() => openInNewTab(data.resume)}
+          >
+            Download Resume
+          </Button>
+        </div>
       </div>
       <Form disabled={true} data={data} />
-    </>
+    </div>
   );
 };
 export default ApplicationsDetails;

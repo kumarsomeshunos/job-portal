@@ -14,10 +14,12 @@ import Faq from "./components/FAQ";
 import "./components/css/styles.css"
 
 
+
 import Recognition from "./components/Recognition";
 import ApplicationDetails from "./components/admin/ApplicationDetails";
 // import Dashboard from "./components/dashboard/Dashboard";
 import ApplicationsTable from "./components/admin/applicationtable";
+import JobListing from "./components/JobListing";
 
 function App() {
   return (
@@ -53,6 +55,7 @@ function App() {
           />
           <Route exact path="/opening" element={<JobDesc />} />
           <Route exact path="/faq" element={<Faq />} />
+          <Route exact path="/admin/joblisting" element={<JobListing />} />
         </Routes>
         <Footer />
       </div>
