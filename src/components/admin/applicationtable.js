@@ -44,6 +44,7 @@ const ApplicationsTable = ({ isLoading }) => {
 
   const [loading, setLoading] = useState(false);
   const [facultiesData, setFacultiesData] = useState([]);
+  const [AdminStats, setAdminStats] = useState({});
 
   const [facultiesSelect, setFacultiesSelect] = useState([""]);
   const [schoolSelect, setSchoolSelect] = useState([""]);
@@ -93,6 +94,12 @@ const ApplicationsTable = ({ isLoading }) => {
         })
         .then((val) => {
           // Loop over the results and create a new array of objects
+          setAdminStats({
+            totalsubmitted: val.stats.totalSubmitted,
+            totalacad: val.stats.totalAcademic,
+            totalnacad: val.stats.totalNonAcademic,
+            totalAdmin: val.stats.totalAdmin,
+          });
           const newApplicantList = val.results.map((item) => {
             return {
               id: item.id,
@@ -271,7 +278,31 @@ const ApplicationsTable = ({ isLoading }) => {
   ];
 
   return (
+  
     <div className={classes.padding}>
+        <div className="row">
+      <div class="alert alert-secondary col" role="alert" style={{maxWidth:'20rem',marginLeft:'20px'}}>
+        <h5>
+          Total Submission: <span>{AdminStats.totalsubmitted}</span>
+        </h5>
+      </div>
+      <div class="alert alert-secondary col" role="alert" style={{maxWidth:'20rem', marginLeft:'20px'}}>
+      <h5>
+          Total Academic Submissions: <span>{AdminStats.totalacad}</span>
+        </h5>
+      </div>
+      <div class="alert alert-secondary col" role="alert" style={{maxWidth:'20rem',marginLeft:'20px'}}>
+      <h5>
+          Total Non Academic Submision: <span>{AdminStats.totalnacad}</span>
+        </h5>
+      </div>
+      <div class="alert alert-secondary col" role="alert" style={{maxWidth:'20rem',marginLeft:'20px'}}>
+      <h5>
+          Total Admins: <span>{AdminStats.totalAdmin}</span>
+        </h5>
+      </div>
+      </div>
+
       <Grid container>
         <Grid item xs={12} md={4}>
           <FormControl sx={{ m: 1, minWidth: 350 }}>
@@ -377,7 +408,9 @@ const ApplicationsTable = ({ isLoading }) => {
             color="primary"
             size="large"
             style={{ marginLeft: "10px", width: "70%", marginTop: "15px" }}
-            onClick={() => openInNewTab("http://localhost:3000/admin/joblisting")}
+            onClick={() =>
+              openInNewTab("http://localhost:3000/admin/joblisting")
+            }
           >
             Add New Job Listing
           </Button>

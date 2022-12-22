@@ -1,9 +1,10 @@
 import React, { useEffect, useState, useCallback } from "react";
 import { useParams } from "react-router-dom";
-import { Button } from "@mui/material";
+
 // import Card from "react-bootstrap/Card";
 import "./ApplicationDetails.css";
 import Form from "../Form";
+import { Button } from "@mui/material";
 
 const ApplicationsDetails = () => {
   const { id } = useParams();
@@ -133,39 +134,28 @@ const ApplicationsDetails = () => {
     window.open(url, "_blank", "noopener,noreferrer");
   };
   return (
-    <div>
-      <div className="row details">
-        <div className="col-lg-4"><h3 className="title">{data.name}</h3> </div>
-        <div className="col-lg-4">
-          <img src={data.photo} className="applicantphoto" />
-        </div>
-      </div>
-      <div className="row details">
-        <div className="col-lg-4">
-          {" "}
-          <Button
-            variant="contained"
-            color="primary"
-            size="small"
-            className="btn"
-            onClick={() => openInNewTab(data.photo)}
-          >
-            Download Photo
-          </Button>
-          {" "}
-          <Button
-            variant="contained"
-            color="primary"
-            size="small"
-            className="btn"
-            onClick={() => openInNewTab(data.resume)}
-          >
-            Download Resume
-          </Button>
+    <>
+      <div class="card mb-3" style={{maxWidth: "540px", marginTop:'3%', marginLeft:'13%'}}>
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src={data.photo} class="img-fluid rounded-start" alt="..." />
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">{data.name}</h5>
+              <p class="card-text">
+               <Button variant="contained" color="primary"  onClick={() => openInNewTab(`${data.resume}`)}>Resume</Button>
+               <Button variant="contained" color="primary" style={{marginLeft:'2px'}} onClick={() => openInNewTab(`${data.photo}`)}>Photo</Button>
+              </p>
+              <p class="card-text">
+                <small class="text-muted">Last updated 3 mins ago</small>
+              </p>
+            </div>
+          </div>
         </div>
       </div>
       <Form disabled={true} data={data} />
-    </div>
+    </>
   );
 };
 export default ApplicationsDetails;
