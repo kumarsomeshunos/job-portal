@@ -1,57 +1,85 @@
-import React from "react";
-import './sort.css'
+import React, { useState } from 'react';
+import './sort.css';
+import { facultiesList, list } from './Form/faculties (1)';
 
 const Sort = () => {
+  const [fac, setFac] = useState('');
+  const [dep, setDep] = useState('');
+
   return (
-    <div className="sortmain">
-      <div className="suggestions">
-        <div className="sugg">Teaching</div>
-        <div className="sugg">Research</div>
-        <div className="sugg">Part-Time</div>
-        <div className="sugg">Full-Time</div>
-        <div className="sugg">PhD</div>
-        <div className="sugg">Teaching</div>
-        <div className="sugg">Research</div>
-        <div className="sugg">Part-Time</div>
-        <div className="sugg">Full-Time</div>
+    <div className='sortmain'>
+      <div className='suggestions'>
+        <div className='sugg'>Teaching</div>
+        <div className='sugg'>Research</div>
+        <div className='sugg'>Part-Time</div>
+        <div className='sugg'>Full-Time</div>
+        <div className='sugg'>PhD</div>
+        <div className='sugg'>Teaching</div>
+        <div className='sugg'>Research</div>
+        <div className='sugg'>Part-Time</div>
+        <div className='sugg'>Full-Time</div>
       </div>
       <hr />
-      <div className="realsort">
-        <div class="col-md-2">
-          <select class="form-select" id="validationCustom04" required>
-            <option selected disabled value="">
-            Faculty
+      <div className='realsort'>
+        <div class='col-md-2'>
+          <select
+            class='form-select'
+            id='validationCustom04'
+            required
+            onChange={(e) => {
+              setFac(e.target.value);
+            }}
+          >
+            <option selected disabled value=''>
+              Faculty
             </option>
-            <option>...</option>
+            {list.map((faculty) => {
+              return <option>{faculty}</option>;
+            })}
           </select>
-          <div class="invalid-feedback">Please select a valid state.</div>
+          <div class='invalid-feedback'>Please select a valid state.</div>
         </div>
-        <div class="col-md-2">
-          <select class="form-select" id="validationCustom04" required>
-            <option selected disabled value="">
-            School
+        <div class='col-md-2'>
+          <select
+            class='form-select'
+            id='validationCustom04'
+            required
+            onChange={(e) => {
+              setDep(e.target.value);
+            }}
+          >
+            <option selected disabled value=''>
+              School
             </option>
-            <option>...</option>
+            {fac &&
+              Object.keys(facultiesList[fac]).map((dept) => {
+                return <option>{dept}</option>;
+              })}
           </select>
-          <div class="invalid-feedback">Please select a valid state.</div>
+          <div class='invalid-feedback'>Please select a valid state.</div>
         </div>
-        <div class="col-md-2">
-          <select class="form-select" id="validationCustom04" required>
-            <option selected disabled value="">
-            Department
+        <div class='col-md-2'>
+          <select class='form-select' id='validationCustom04' required>
+            <option selected disabled value=''>
+              Department
             </option>
-            <option>...</option>
+            {dep &&
+              facultiesList[fac][dep].map((dept) => {
+                return <option>{dept}</option>;
+              })}
           </select>
-          <div class="invalid-feedback">Please select a valid state.</div>
+          <div class='invalid-feedback'>Please select a valid state.</div>
         </div>
-        <div class="col-md-2">
-          <select class="form-select" id="validationCustom04" required>
-            <option selected disabled value="">
-            Type
+        <div class='col-md-2'>
+          <select class='form-select' id='validationCustom04' required>
+            <option selected disabled value=''>
+              Type
             </option>
-            <option>...</option>
+            <option>Academic</option>
+            <option>Non-Academic</option>
+            <option>Administrative</option>
           </select>
-          <div class="invalid-feedback">Please select a valid state.</div>
+          <div class='invalid-feedback'>Please select a valid state.</div>
         </div>
       </div>
       <hr />

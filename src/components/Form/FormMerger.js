@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PartOne from './PartOne';
 import PartTwo from './PartTwo';
 import PartThree from './PartThree';
@@ -11,6 +11,7 @@ import PartEight from './PartEight';
 import PartTwelve from './PartTwelve';
 
 const FormMerger = (props) => {
+  const [faculty, setFaculty] = useState('');
   return (
     <div className='container' style={{ 'margin-top': '3rem' }}>
       <form className='row g-3 needs-validation' noValidate=''>
