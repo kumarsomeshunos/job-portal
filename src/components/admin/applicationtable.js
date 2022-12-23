@@ -25,25 +25,34 @@ import { SelectChangeEvent } from "@mui/material/Select";
 // import SkeletonTotalGrowthBarChart from 'ui-component/cards/Skeleton/TotalGrowthBarChart';
 // import MainCard from 'ui-component/cards/MainCard';
 // import { gridSpacing } from 'store/constant';
-import { jobTypeOptions, statusOptions, statusColor } from "./constants";
+import {
+  jobTypeOptions,
+  statusOptions,
+  statusColor,
+  departmentOptions,
+  schoolOptions,
+  facultiesOptions,
+} from "./constants";
 import classes from "./ApplicationTable.module.css";
+
 
 // ==============================|| DASHBOARD DEFAULT - TOTAL GROWTH BAR CHART ||============================== //
 
 const ApplicationsTable = ({ isLoading }) => {
-  const URL = "http://jobmuj.projects.chirag.sh:3000/applications";
+  const URL = "http://localhost:3002/applications";
   const URLFaculties =
-    "http://jobmuj.projects.chirag.sh:3000/applications/faculties";
+    "http://localhost:3002/applications/faculties";
 
   const [loading, setLoading] = useState(false);
-  const [facultiesData, setFacultiesData] = useState([]);
+  const [facultiesData, setFacultiesData] = useState({});
+  const [AdminStats, setAdminStats] = useState({});
 
   const [facultiesSelect, setFacultiesSelect] = useState([""]);
   const [schoolSelect, setSchoolSelect] = useState([""]);
   const [departmentSelect, setDepartmentSelect] = useState([""]);
 
   const [applicantList, setApplicantList] = useState([]);
-  const [stats, setStats] = useState([]);
+  const [, setStats] = useState([]);
   const [dateRange, setDateRange] = useState({ start: "", end: "" });
   const [searchQuery, setSearchQuery] = useState("");
   const [searchName, setSearchName] = useState("");
@@ -54,7 +63,9 @@ const ApplicationsTable = ({ isLoading }) => {
     department: "",
     status: "",
   });
-
+  const openInNewTab = (url) => {
+    window.open(url, "_blank", "noopener,noreferrer");
+  };
   const FetchingData = useCallback(async () => {
     console.log(encodeURIComponent(filters.department));
 
@@ -84,6 +95,12 @@ const ApplicationsTable = ({ isLoading }) => {
         })
         .then((val) => {
           // Loop over the results and create a new array of objects
+          setAdminStats({
+            totalsubmitted: val.stats.totalSubmitted,
+            totalacad: val.stats.totalAcademic,
+            totalnacad: val.stats.totalNonAcademic,
+            totalAdmin: val.stats.totalAdmin,
+          });
           const newApplicantList = val.results.map((item) => {
             return {
               id: item.id,
@@ -105,7 +122,7 @@ const ApplicationsTable = ({ isLoading }) => {
             };
           });
 
-          console.log(newApplicantList);
+          // console.log(newApplicantList);
 
           setApplicantList(newApplicantList);
           setStats(val.stats);
@@ -143,8 +160,10 @@ const ApplicationsTable = ({ isLoading }) => {
   }, []);
 
   useEffect(() => {
-    console.log(dateRange);
+    // console.log(dateRange);
+  
     FetchingData();
+
   }, [FetchingData]);
 
   useEffect(() => {
@@ -156,7 +175,7 @@ const ApplicationsTable = ({ isLoading }) => {
     event: SelectChangeEvent<typeof filters>
   ) => {
     setFilters({ ...filters, [propertyName]: event.target.value });
-    console.log({ Filters: filters });
+    // console.log({ Filters: filters });
   };
 
   const handleFacultyChange = (event: SelectChangeEvent<typeof filters>) => {
@@ -174,7 +193,7 @@ const ApplicationsTable = ({ isLoading }) => {
 
   const handleSchoolChange = (event: SelectChangeEvent<typeof filters>) => {
     setFilters({ ...filters, school: event.target.value });
-    console.log(event.target.value);
+    // console.log(event.target.value);
     const newDepartmentSelect = [""];
     console.log(facultiesData[filters.faculty][event.target.value]);
     for (var key of Object.keys(
@@ -263,6 +282,45 @@ const ApplicationsTable = ({ isLoading }) => {
 
   return (
     <div className={classes.padding}>
+      <div className="row">
+        <div
+          class="alert alert-secondary col"
+          role="alert"
+          style={{ maxWidth: "20rem", marginLeft: "20px" }}
+        >
+          <h5>
+            Total Submission: <span>{AdminStats.totalsubmitted}</span>
+          </h5>
+        </div>
+        <div
+          class="alert alert-secondary col"
+          role="alert"
+          style={{ maxWidth: "20rem", marginLeft: "20px" }}
+        >
+          <h5>
+            Total Academic Submissions: <span>{AdminStats.totalacad}</span>
+          </h5>
+        </div>
+        <div
+          class="alert alert-secondary col"
+          role="alert"
+          style={{ maxWidth: "20rem", marginLeft: "20px" }}
+        >
+          <h5>
+            Total Non Academic Submision: <span>{AdminStats.totalnacad}</span>
+          </h5>
+        </div>
+        <div
+          class="alert alert-secondary col"
+          role="alert"
+          style={{ maxWidth: "20rem", marginLeft: "20px" }}
+        >
+          <h5>
+            Total Admins: <span>{AdminStats.totalAdmin}</span>
+          </h5>
+        </div>
+      </div>
+
       <Grid container>
         <Grid item xs={12} md={4}>
           <FormControl sx={{ m: 1, minWidth: 350 }}>
@@ -361,6 +419,19 @@ const ApplicationsTable = ({ isLoading }) => {
             </Select>
             {/* <FormHelperText>Read only</FormHelperText> */}
           </FormControl>
+        </Grid>
+        <Grid item xs={12} md={4}>
+          <Button
+            variant="contained"
+            color="primary"
+            size="large"
+            style={{ marginLeft: "10px", width: "70%", marginTop: "15px" }}
+            onClick={() =>
+              openInNewTab("http://localhost:3000/admin/joblisting")
+            }
+          >
+            Add New Job Listing
+          </Button>
         </Grid>
       </Grid>
       <Grid container>
