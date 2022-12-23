@@ -35,15 +35,16 @@ import {
 } from "./constants";
 import classes from "./ApplicationTable.module.css";
 
+
 // ==============================|| DASHBOARD DEFAULT - TOTAL GROWTH BAR CHART ||============================== //
 
 const ApplicationsTable = ({ isLoading }) => {
-  const URL = "http://jobmuj.projects.chirag.sh:3000/applications";
+  const URL = "http://localhost:3002/applications";
   const URLFaculties =
-    "http://jobmuj.projects.chirag.sh:3000/applications/faculties";
+    "http://localhost:3002/applications/faculties";
 
   const [loading, setLoading] = useState(false);
-  const [facultiesData, setFacultiesData] = useState([]);
+  const [facultiesData, setFacultiesData] = useState({});
   const [AdminStats, setAdminStats] = useState({});
 
   const [facultiesSelect, setFacultiesSelect] = useState([""]);
@@ -121,7 +122,7 @@ const ApplicationsTable = ({ isLoading }) => {
             };
           });
 
-          console.log(newApplicantList);
+          // console.log(newApplicantList);
 
           setApplicantList(newApplicantList);
           setStats(val.stats);
@@ -159,8 +160,10 @@ const ApplicationsTable = ({ isLoading }) => {
   }, []);
 
   useEffect(() => {
-    console.log(dateRange);
+    // console.log(dateRange);
+  
     FetchingData();
+
   }, [FetchingData]);
 
   useEffect(() => {
@@ -172,7 +175,7 @@ const ApplicationsTable = ({ isLoading }) => {
     event: SelectChangeEvent<typeof filters>
   ) => {
     setFilters({ ...filters, [propertyName]: event.target.value });
-    console.log({ Filters: filters });
+    // console.log({ Filters: filters });
   };
 
   const handleFacultyChange = (event: SelectChangeEvent<typeof filters>) => {
@@ -190,7 +193,7 @@ const ApplicationsTable = ({ isLoading }) => {
 
   const handleSchoolChange = (event: SelectChangeEvent<typeof filters>) => {
     setFilters({ ...filters, school: event.target.value });
-    console.log(event.target.value);
+    // console.log(event.target.value);
     const newDepartmentSelect = [""];
     console.log(facultiesData[filters.faculty][event.target.value]);
     for (var key of Object.keys(
@@ -278,29 +281,44 @@ const ApplicationsTable = ({ isLoading }) => {
   ];
 
   return (
-  
     <div className={classes.padding}>
-        <div className="row">
-      <div class="alert alert-secondary col" role="alert" style={{maxWidth:'20rem',marginLeft:'20px'}}>
-        <h5>
-          Total Submission: <span>{AdminStats.totalsubmitted}</span>
-        </h5>
-      </div>
-      <div class="alert alert-secondary col" role="alert" style={{maxWidth:'20rem', marginLeft:'20px'}}>
-      <h5>
-          Total Academic Submissions: <span>{AdminStats.totalacad}</span>
-        </h5>
-      </div>
-      <div class="alert alert-secondary col" role="alert" style={{maxWidth:'20rem',marginLeft:'20px'}}>
-      <h5>
-          Total Non Academic Submision: <span>{AdminStats.totalnacad}</span>
-        </h5>
-      </div>
-      <div class="alert alert-secondary col" role="alert" style={{maxWidth:'20rem',marginLeft:'20px'}}>
-      <h5>
-          Total Admins: <span>{AdminStats.totalAdmin}</span>
-        </h5>
-      </div>
+      <div className="row">
+        <div
+          class="alert alert-secondary col"
+          role="alert"
+          style={{ maxWidth: "20rem", marginLeft: "20px" }}
+        >
+          <h5>
+            Total Submission: <span>{AdminStats.totalsubmitted}</span>
+          </h5>
+        </div>
+        <div
+          class="alert alert-secondary col"
+          role="alert"
+          style={{ maxWidth: "20rem", marginLeft: "20px" }}
+        >
+          <h5>
+            Total Academic Submissions: <span>{AdminStats.totalacad}</span>
+          </h5>
+        </div>
+        <div
+          class="alert alert-secondary col"
+          role="alert"
+          style={{ maxWidth: "20rem", marginLeft: "20px" }}
+        >
+          <h5>
+            Total Non Academic Submision: <span>{AdminStats.totalnacad}</span>
+          </h5>
+        </div>
+        <div
+          class="alert alert-secondary col"
+          role="alert"
+          style={{ maxWidth: "20rem", marginLeft: "20px" }}
+        >
+          <h5>
+            Total Admins: <span>{AdminStats.totalAdmin}</span>
+          </h5>
+        </div>
       </div>
 
       <Grid container>
@@ -313,10 +331,10 @@ const ApplicationsTable = ({ isLoading }) => {
               label="Faculty"
               onChange={(e) => handleFacultyChange(e)}
             >
-              {facultiesOptions?.map((option) => {
+              {facultiesSelect?.map((option) => {
                 return (
-                  <MenuItem key={option.value} value={option.value}>
-                    {option.label ?? option.value}
+                  <MenuItem key={option} value={option}>
+                    {option}
                   </MenuItem>
                 );
               })}
@@ -333,10 +351,10 @@ const ApplicationsTable = ({ isLoading }) => {
               label="School"
               onChange={(e) => handleSchoolChange(e)}
             >
-              {schoolOptions?.map((option) => {
+              {schoolSelect?.map((option) => {
                 return (
-                  <MenuItem key={option.value} value={option.value}>
-                    {option.label ?? option.value}
+                  <MenuItem key={option} value={option}>
+                    {option}
                   </MenuItem>
                 );
               })}
@@ -351,10 +369,10 @@ const ApplicationsTable = ({ isLoading }) => {
               label="Faculty"
               onChange={(e) => handleDepartmentChange(e)}
             >
-              {departmentOptions?.map((option) => {
+              {departmentSelect?.map((option) => {
                 return (
-                  <MenuItem key={option.value} value={option.value}>
-                    {option.label ?? option.value}
+                  <MenuItem key={option} value={option}>
+                    {option}
                   </MenuItem>
                 );
               })}
