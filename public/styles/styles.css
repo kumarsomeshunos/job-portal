@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;800&display=swap');
-
+body {
+  overflow-x: hidden;
+}
 * {
   font-family: 'Work Sans', sans-serif;
   box-sizing: border-box;
@@ -219,7 +221,6 @@ img {
 
 .btn {
   border: none;
-  background-color: rgba(241, 238, 206, 0.383);
   margin: 1rem;
   border-radius: 5px;
   cursor: pointer;
@@ -249,8 +250,6 @@ img {
     margin-left: 1rem;
   }
 }
-
-
 
 .openings > h2 {
   margin: 2% 0;
@@ -293,12 +292,12 @@ img {
   border-radius: 1%;
 }
 .main-accordian {
-  width: 90vw;
-  max-width: 1170px;
-  margin: 10rem auto;
+  width: 100vw;
+  margin: 5rem auto;
+  /* overflow-x: hidden; */
 }
 .acc {
-  background-color: rgba(37, 68, 204, 0.068) !important;
+  background-color: #f8f9fb !important;
   border: 1.5px solid rgb(78, 78, 78) !important;
 }
 .muj-main-img {
@@ -327,4 +326,8 @@ img {
   border-radius: 5px;
 }
 .hell {
+}
+.stat h2 div {
+  width: 100px !important;
+  display: inline;
 }

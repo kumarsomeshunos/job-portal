@@ -1,122 +1,24 @@
 import React, { useState } from 'react';
 
 const PartFive = () => {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState(['Hello']);
+  const [data1, setData1] = useState(['Hello']);
   const addHello = (e) => {
     e.preventDefault();
     setData([...data, 'Hello']);
   };
+  const addHello1 = (e) => {
+    e.preventDefault();
+    setData1([...data1, 'Hello']);
+  };
   return (
     <>
-      <hr />
-      <p>
-        <b>Academic</b>
-      </p>
-      <div className='col-md-3'>
-        <label htmlFor='validationCustom04' className='form-label'>
-          Nature Of Job
-        </label>
-        <select className='form-select' id='validationCustom04' required=''>
-          <option selected='' disabled='' value=''>
-            Choose...
-          </option>
-          <option>...</option>
-        </select>
-        <div className='invalid-feedback'>Please select a valid state.</div>
-      </div>
-      <div className='col-md-3'>
-        <label htmlFor='validationCustom04' className='form-label'>
-          Country
-        </label>
-        <select className='form-select' id='validationCustom04' required=''>
-          <option selected='' disabled='' value=''>
-            Choose...
-          </option>
-          <option>...</option>
-        </select>
-        <div className='invalid-feedback'>Please select a valid state.</div>
-      </div>
-
-      <div className='col-md-3'>
-        <label htmlFor='validationCustom03' className='form-label'>
-          University
-        </label>
-        <input
-          type='text'
-          className='form-control'
-          id='validationCustom03'
-          required=''
-        />
-        <div className='invalid-feedback'>Please provide your email.</div>
-      </div>
-
-      <div className='col-md-3'>
-        <label htmlFor='validationCustom03' className='form-label'>
-          College
-        </label>
-        <input
-          type='text'
-          className='form-control'
-          id='validationCustom03'
-          required=''
-        />
-        <div className='invalid-feedback'>Please provide your email.</div>
-      </div>
-
-      <div className='col-md-3'>
-        <label htmlFor='validationCustom04' className='form-label'>
-          Position
-        </label>
-        <select className='form-select' id='validationCustom04' required=''>
-          <option selected='' disabled='' value=''>
-            Choose...
-          </option>
-          <option>...</option>
-        </select>
-        <div className='invalid-feedback'>Please select a valid state.</div>
-      </div>
-
-      <div className='col-md-3'>
-        <label htmlFor='validationCustom03' className='form-label'>
-          Academic Domain
-        </label>
-        <input
-          type='text'
-          className='form-control'
-          id='validationCustom03'
-          required=''
-        />
-        <div className='invalid-feedback'>Please provide your email.</div>
-      </div>
-
-      <div className='col-md-3'>
-        <label htmlFor='validationCustom03' className='form-label'>
-          Date From
-        </label>
-        <input
-          type='date'
-          className='form-control'
-          id='validationCustom03'
-          required=''
-        />
-        <div className='invalid-feedback'>Please provide your email.</div>
-      </div>
-      <div className='col-md-3'>
-        <label htmlFor='validationCustom04' className='form-label'>
-          Date To
-        </label>
-        <select className='form-select' id='validationCustom04' required=''>
-          <option selected='' disabled='' value=''>
-            Choose...
-          </option>
-          <option>...</option>
-        </select>
-        <div className='invalid-feedback'>Please select a valid state.</div>
-      </div>
-
       {data.map(() => {
         return (
           <>
+            <p>
+              <b>Academic</b>
+            </p>
             <div className='col-md-3'>
               <label htmlFor='validationCustom04' className='form-label'>
                 Country
@@ -246,8 +148,6 @@ const PartFive = () => {
               <div className='invalid-feedback'>Please provide your email.</div>
             </div>
             <br />
-            <br />
-            <hr />
           </>
         );
       })}
@@ -259,101 +159,13 @@ const PartFive = () => {
       </div>
 
       <hr />
-      <p>
-        <b>Non Academic</b>
-      </p>
-      <div className='col-md-3'>
-        <label htmlFor='validationCustom04' className='form-label'>
-          Nature Of Job
-        </label>
-        <select className='form-select' id='validationCustom04' required=''>
-          <option selected='' disabled='' value=''>
-            Choose...
-          </option>
-          <option>...</option>
-        </select>
-        <div className='invalid-feedback'>Please select a valid state.</div>
-      </div>
-      <div className='col-md-3'>
-        <label htmlFor='validationCustom04' className='form-label'>
-          Country
-        </label>
-        <select className='form-select' id='validationCustom04' required=''>
-          <option selected='' disabled='' value=''>
-            Choose...
-          </option>
-          <option>...</option>
-        </select>
-        <div className='invalid-feedback'>Please select a valid state.</div>
-      </div>
 
-      <div className='col-md-3'>
-        <label htmlFor='validationCustom03' className='form-label'>
-          Organisation
-        </label>
-        <input
-          type='text'
-          className='form-control'
-          id='validationCustom03'
-          required=''
-        />
-        <div className='invalid-feedback'>Please provide your email.</div>
-      </div>
-
-      <div className='col-md-3'>
-        <label htmlFor='validationCustom03' className='form-label'>
-          Designation
-        </label>
-        <input
-          type='text'
-          className='form-control'
-          id='validationCustom03'
-          required=''
-        />
-        <div className='invalid-feedback'>Please provide your email.</div>
-      </div>
-
-      <div className='col-md-3'>
-        <label htmlFor='validationCustom03' className='form-label'>
-          Department
-        </label>
-        <input
-          type='text'
-          className='form-control'
-          id='validationCustom03'
-          required=''
-        />
-        <div className='invalid-feedback'>Please provide your email.</div>
-      </div>
-
-      <div className='col-md-3'>
-        <label htmlFor='validationCustom03' className='form-label'>
-          Date From
-        </label>
-        <input
-          type='date'
-          className='form-control'
-          id='validationCustom03'
-          required=''
-        />
-        <div className='invalid-feedback'>Please provide your email.</div>
-      </div>
-      <div className='col-md-3'>
-        <label htmlFor='validationCustom04' className='form-label'>
-          Date To
-        </label>
-        <select className='form-select' id='validationCustom04' required=''>
-          <option selected='' disabled='' value=''>
-            Choose...
-          </option>
-          <option>...</option>
-        </select>
-        <div className='invalid-feedback'>Please select a valid state.</div>
-      </div>
-
-      {data.map(() => {
+      {data1.map(() => {
         return (
           <>
+            <p>
+              <b>Non Academic</b>
+            </p>
             <div className='col-md-3'>
               <label htmlFor='validationCustom04' className='form-label'>
                 Country
@@ -483,14 +295,12 @@ const PartFive = () => {
               <div className='invalid-feedback'>Please provide your email.</div>
             </div>
             <br />
-            <br />
-            <hr />
           </>
         );
       })}
 
       <div className='col-md-12'>
-        <button className='btn btn-primary' type='button' onClick={addHello}>
+        <button className='btn btn-primary' type='button' onClick={addHello1}>
           Add More
         </button>
       </div>
