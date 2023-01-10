@@ -39,9 +39,9 @@ import classes from "./ApplicationTable.module.css";
 // ==============================|| DASHBOARD DEFAULT - TOTAL GROWTH BAR CHART ||============================== //
 
 const ApplicationsTable = ({ isLoading }) => {
-  const URL = "http://localhost:3002/applications";
+  const URL = "http://65.109.166.43:3000/applications";
   const URLFaculties =
-    "http://localhost:3002/applications/faculties";
+    "http://65.109.166.43:3000/applications/faculties";
 
   const [loading, setLoading] = useState(false);
   const [facultiesData, setFacultiesData] = useState({});
