@@ -427,7 +427,7 @@ const ApplicationsTable = ({ isLoading }) => {
             size="large"
             style={{ marginLeft: "10px", width: "70%", marginTop: "15px" }}
             onClick={() =>
-              openInNewTab("http://localhost:3000/admin/joblisting")
+              openInNewTab("http://job-portal-olive.vercel.app:3000/admin/joblisting")
             }
           >
             Add New Job Listing
